@@ -353,10 +353,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"D:/Unity/2022.3.40f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Unity/2022.3.40f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Scripts/cameraController.cs"
-"Assets/Scripts/enemyAI.cs"
-"Assets/Scripts/IDamage.cs"
-"Assets/Scripts/playerController.cs"
+"Assets/Scripts/Damon/cameraController.cs"
+"Assets/Scripts/Damon/enemyAI.cs"
+"Assets/Scripts/Damon/IDamage.cs"
+"Assets/Scripts/Damon/playerController.cs"
 -langversion:9.0
 /deterministic
 /optimize+
