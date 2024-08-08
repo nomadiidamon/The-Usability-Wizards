@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 3440
     height: 1349
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 69
+  controlID: 16
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -708,9 +708,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 55.211704, y: -21.79584, z: 30.873446}
+    m_Target: {x: -76.068634, y: -150.34375, z: -18.274803}
     speed: 2
-    m_Value: {x: 55.211704, y: -21.79584, z: 30.873446}
+    m_Value: {x: -76.068634, y: -150.34375, z: -18.274803}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -756,13 +756,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.10689688, y: 0.77164763, z: -0.13468328, w: 0.612343}
+    m_Target: {x: -0.37373355, y: 0.5974146, z: -0.36817655, w: -0.60642654}
     speed: 2
-    m_Value: {x: 0.10689845, y: 0.771659, z: -0.13468526, w: 0.612352}
+    m_Value: {x: -0.37430635, y: 0.5965377, z: -0.3676361, w: -0.60735595}
   m_Size:
-    m_Target: 58.861732
+    m_Target: 117.8743
     speed: 2
-    m_Value: 58.861732
+    m_Value: 112.79837
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -885,9 +885,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5a5a0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 30fbffff
+      m_SelectedIDs: bcc8feff
+      m_LastClickedID: -79684
+      m_ExpandedIDs: c2c9feff12d4feff56e0feff4af0feff620bffff5010ffff1c15ffff4450ffff3657ffffe257ffffa45dffff185effffa26bffff70f7ffffc8f9ffff30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -903,7 +903,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 9}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -956,7 +956,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Damon
+    - Assets/Prefabs/Damon
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -964,16 +964,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes/Damon
+  - Assets/Prefabs/Damon
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity\The-Usability-Wizards\2024-Project&Portfolio-FPS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 305a0000
-    m_LastClickedID: 23088
-    m_ExpandedIDs: 00000000e6590000e859000000ca9a3b
+    m_SelectedIDs: e85a0000
+    m_LastClickedID: 23272
+    m_ExpandedIDs: 00000000e6590000e8590000f8590000fa590000fc59000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1028,22 +1028,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Damon's Lecture Follow Along
+      m_OriginalName: Damon's Lecture Follow Along
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 23044
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
