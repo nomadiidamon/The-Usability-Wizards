@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerController : MonoBehaviour
+public class playerController : MonoBehaviour, IDamage
 {
     [SerializeField] CharacterController controller;
     [SerializeField] LayerMask ignoreMask;
 
+    [SerializeField] int HP;
     [SerializeField] int speed;
     [SerializeField] int sprintMod;
     [SerializeField] int jumpMax;
@@ -21,6 +22,7 @@ public class playerController : MonoBehaviour
     Vector3 playerVel;
 
     int jumpCount;
+    int HPOrig;
 
     bool isSprinting;
     bool isShooting;
@@ -29,7 +31,7 @@ public class playerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        HPOrig = HP;
     }
 
     // Update is called once per frame
@@ -104,5 +106,16 @@ public class playerController : MonoBehaviour
 
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
+    }
+
+    public void takeDamage(int amount)
+    {
+        HP -= amount;
+
+        // I'm dead!
+        if (HP <= 0)
+        {
+            gameManager.instance.youLose();
+        }
     }
 }
