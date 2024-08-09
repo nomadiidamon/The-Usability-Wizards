@@ -13,11 +13,17 @@ public class gameManager : MonoBehaviour
     [SerializeField] GameObject menuLose;
 
     [SerializeField] TMP_Text enemyCountText;
+    [SerializeField] int playersHealthPool;
+
+    public void SetPlayersCurrentHealth(int value)
+    {
+        playersHealthPool = value;
+    }
 
 
     public GameObject player;
     public playerController playerScript;
-    //public TestPlayerController testPlayerScript;
+    
 
     public bool isPaused;
 
@@ -59,9 +65,9 @@ public class gameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
     }
 
-    public void stateUnpause() 
-    { 
-        isPaused =! isPaused;
+    public void stateUnpause()
+    {
+        isPaused = !isPaused;
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -92,4 +98,7 @@ public class gameManager : MonoBehaviour
         menuActive.SetActive(isPaused);
 
     }
+
+
+
 }

@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class TestPlayerController : MonoBehaviour
+public class playerController : MonoBehaviour, IDamage
 {
     [SerializeField] CharacterController controller;
     [SerializeField] LayerMask ignoreMask;
+
+    [SerializeField] int HP;
+
+    public int GetCurrentHealth()
+    {
+        return HP;
+    }
 
     [SerializeField] int speed;
     [SerializeField] int sprintMod;
@@ -16,15 +22,13 @@ public class TestPlayerController : MonoBehaviour
 
     [SerializeField] int shootDamage;
     [SerializeField] int shootDist;
-    [SerializeField] int shootVelocity;
     [SerializeField] float shootRate;
-
-    [SerializeField] Projectile projectile;
-
+    
     Vector3 move;
     Vector3 playerVel;
 
     int jumpCount;
+    public int HPOrig;
 
     bool isSprinting;
     bool isShooting;
@@ -33,7 +37,7 @@ public class TestPlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        HPOrig = HP;
     }
 
     // Update is called once per frame
@@ -98,12 +102,9 @@ public class TestPlayerController : MonoBehaviour
         {
             Debug.Log(hit.collider.name);
             IDamage dmg = hit.collider.GetComponent<IDamage>();
-
-
+            
             if (dmg != null)
             {
-                projectile.transform.position = hit.collider.transform.position;
-
                 dmg.takeDamage(shootDamage);
             }
 
@@ -112,4 +113,16 @@ public class TestPlayerController : MonoBehaviour
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
     }
+
+    public void takeDamage(int amount)
+    {
+        HP -= amount;
+        gameManager.instance.SetPlayersCurrentHealth(HP);
+        // I'm dead!
+        if (HP <= 0)
+        {
+            gameManager.instance.youLose();
+        }
+    }
+
 }
