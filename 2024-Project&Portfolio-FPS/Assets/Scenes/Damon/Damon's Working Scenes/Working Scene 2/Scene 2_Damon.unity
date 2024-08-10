@@ -797,6 +797,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7285754020841100439, guid: af8740e7e1892784087175aa1cd1f747, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 972373808}
+    - target: {fileID: 7285754020841100439, guid: af8740e7e1892784087175aa1cd1f747, type: 3}
+      propertyPath: menuWin
+      value: 
+      objectReference: {fileID: 1300290335}
+    - target: {fileID: 7285754020841100439, guid: af8740e7e1892784087175aa1cd1f747, type: 3}
+      propertyPath: menuLose
+      value: 
+      objectReference: {fileID: 572496285}
+    - target: {fileID: 7285754020841100439, guid: af8740e7e1892784087175aa1cd1f747, type: 3}
+      propertyPath: menuPause
+      value: 
+      objectReference: {fileID: 714085361}
+    - target: {fileID: 7285754020841100439, guid: af8740e7e1892784087175aa1cd1f747, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 972373813}
+    - target: {fileID: 7285754020841100439, guid: af8740e7e1892784087175aa1cd1f747, type: 3}
+      propertyPath: enemyCountText
+      value: 
+      objectReference: {fileID: 1938203447}
     - target: {fileID: 7475509968068238560, guid: af8740e7e1892784087175aa1cd1f747, type: 3}
       propertyPath: m_Pivot.x
       value: 0

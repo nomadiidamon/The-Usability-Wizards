@@ -850,7 +850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6170480268887301367}
   m_Layer: 0
-  m_Name: Room_ThreeWalls
+  m_Name: Room_ThreeWalls_Damon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

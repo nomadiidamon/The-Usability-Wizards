@@ -109,6 +109,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
+-define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -356,14 +357,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.40f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.40f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Scripts/Damon/Lecture/buttonFunctions.cs"
-"Assets/Scripts/Damon/Lecture/cameraController.cs"
-"Assets/Scripts/Damon/Lecture/Damage.cs"
-"Assets/Scripts/Damon/Lecture/enemyAI.cs"
-"Assets/Scripts/Damon/Lecture/gameManager.cs"
-"Assets/Scripts/Damon/Lecture/IDamage.cs"
-"Assets/Scripts/Damon/Lecture/playerController.cs"
-"Assets/Scripts/Damon/Working/HealthBarScript.cs"
+"Assets/Scripts/Damon/Lecture/buttonFunctions_Damon.cs"
+"Assets/Scripts/Damon/Lecture/cameraController_Damon.cs"
+"Assets/Scripts/Damon/Lecture/Damage_Damon.cs"
+"Assets/Scripts/Damon/Lecture/enemyAI_Damon.cs"
+"Assets/Scripts/Damon/Lecture/gameManager_Damon.cs"
+"Assets/Scripts/Damon/Lecture/IDamage_Damon.cs"
+"Assets/Scripts/Damon/Lecture/playerController_Damon.cs"
+"Assets/Scripts/Damon/Working/HealthBarScript_Damon.cs"
 -langversion:9.0
 /deterministic
 /optimize+
