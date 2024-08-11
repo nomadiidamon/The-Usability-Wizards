@@ -20,6 +20,11 @@ public class gameManager : MonoBehaviour
         playersHealthPool = value;
     }
 
+    public int GetPlayersCurrentHealth()
+    {
+        return playersHealthPool; 
+    }
+
 
     public GameObject player;
     public playerController playerScript;

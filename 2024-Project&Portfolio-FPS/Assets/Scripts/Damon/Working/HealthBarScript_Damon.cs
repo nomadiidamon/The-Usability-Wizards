@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HealthBarScript : MonoBehaviour
 {
+    [SerializeField] int playersCurrentHealth;
+
     // Start is called before the first frame update
     void Start()
     {

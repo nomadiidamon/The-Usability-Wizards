@@ -130,6 +130,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2599902116755527791, guid: b2a77ab689ad3f0478eb6c1f0785d639, type: 3}
+      propertyPath: HP
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4519858111990313243, guid: b2a77ab689ad3f0478eb6c1f0785d639, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07453728
@@ -188,10 +192,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 481391100}
+  - component: {fileID: 481391104}
+  - component: {fileID: 481391101}
   - component: {fileID: 481391103}
   - component: {fileID: 481391102}
-  - component: {fileID: 481391101}
-  - component: {fileID: 481391104}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -264,25 +268,13 @@ MonoBehaviour:
   m_FillRect: {fileID: 1114912990}
   m_HandleRect: {fileID: 1773129070}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: -0
   m_MaxValue: 10
   m_WholeNumbers: 1
   m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 481391099}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
 --- !u!114 &481391102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa7bf4a67473aa45a864dbbfe352f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersCurrentHealth: 0
 --- !u!1001 &508818383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,6 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa7bf4a67473aa45a864dbbfe352f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersCurrentHealth: 0
 --- !u!1 &1300290335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9016731175823610110, guid: af8740e7e1892784087175aa1cd1f747, type: 3}
