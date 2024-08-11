@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Damon/Damon's Working Scenes/Working Scene 2/Scene 2_Damon.unity
+- path: Assets/Scenes/Hiry/HiryScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
