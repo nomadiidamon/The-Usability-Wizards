@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\Damon\Lecture\cameraController_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\IDamage_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\buttonFunctions_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Working\HealthBarScript_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
     <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />

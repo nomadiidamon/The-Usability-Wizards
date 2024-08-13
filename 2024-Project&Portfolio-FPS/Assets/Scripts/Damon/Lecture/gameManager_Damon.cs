@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
@@ -11,19 +12,11 @@ public class gameManager : MonoBehaviour
     [SerializeField] GameObject menuPause;
     [SerializeField] GameObject menuWin;
     [SerializeField] GameObject menuLose;
+    
 
+    public GameObject flashDamageScreen;
+    public Image playersHealthPool;
     [SerializeField] TMP_Text enemyCountText;
-    [SerializeField] int playersHealthPool;
-
-    public void SetPlayersCurrentHealth(int value)
-    {
-        playersHealthPool = value;
-    }
-
-    public int GetPlayersCurrentHealth()
-    {
-        return playersHealthPool; 
-    }
 
 
     public GameObject player;

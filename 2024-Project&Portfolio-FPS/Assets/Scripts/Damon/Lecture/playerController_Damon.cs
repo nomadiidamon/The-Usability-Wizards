@@ -6,6 +6,7 @@ public class playerController : MonoBehaviour, IDamage
 {
     [SerializeField] CharacterController controller;
     [SerializeField] LayerMask ignoreMask;
+    //[SerializeField] LineRenderer lineRenderer;
 
     [SerializeField] int HP;
 
@@ -40,11 +41,14 @@ public class playerController : MonoBehaviour, IDamage
     void Start()
     {
         HPOrig = HP;
+        updatePlayerUI();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * shootDist, Color.red);
+
         if (!gameManager.instance.isPaused)
         {
             movement();
@@ -99,11 +103,15 @@ public class playerController : MonoBehaviour, IDamage
     {
         isShooting = true;
 
+        //lineRenderer.SetPosition(0, Camera.main.transform.position);
+
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, shootDist, ~ignoreMask))
         {
+            //lineRenderer.SetPosition(1, hit.point);
+
             Instantiate(bullet, shootPos.position, shootPos.rotation);
-            Debug.Log(hit.collider.name);
+            //Debug.Log(hit.collider.name);
             IDamage dmg = hit.collider.GetComponent<IDamage>();
             
             if (dmg != null)
@@ -121,12 +129,25 @@ public class playerController : MonoBehaviour, IDamage
     {
         HP -= amount;
         //gameManager.instance.SetPlayersCurrentHealth(HP);
-
+        updatePlayerUI();
+        StartCoroutine(flashDamage());
         // I'm dead!
         if (HP <= 0)
         {
             gameManager.instance.youLose();
         }
+    }
+
+    IEnumerator flashDamage()
+    {
+        gameManager.instance.flashDamageScreen.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        gameManager.instance.flashDamageScreen.SetActive(false);
+    }
+
+    public void updatePlayerUI()
+    {
+        gameManager.instance.playersHealthPool.fillAmount = (float)HP / HPOrig;
     }
 
 }

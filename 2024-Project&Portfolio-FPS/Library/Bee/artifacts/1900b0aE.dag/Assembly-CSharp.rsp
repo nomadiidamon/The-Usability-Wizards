@@ -364,7 +364,6 @@
 "Assets/Scripts/Damon/Lecture/gameManager_Damon.cs"
 "Assets/Scripts/Damon/Lecture/IDamage_Damon.cs"
 "Assets/Scripts/Damon/Lecture/playerController_Damon.cs"
-"Assets/Scripts/Damon/Working/HealthBarScript_Damon.cs"
 "Assets/Scripts/Damon/Working/MovingPlatform.cs"
 "Assets/Scripts/Hiry/doorFunction.cs"
 -langversion:9.0
