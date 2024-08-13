@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
     <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
+    <Compile Include="Assets\Scripts\Dylan\PickUp_Dylan.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\Damage_Damon.cs" />
   </ItemGroup>
   <ItemGroup>

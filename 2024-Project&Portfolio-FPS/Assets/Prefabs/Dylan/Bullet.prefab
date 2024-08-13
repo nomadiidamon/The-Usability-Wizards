@@ -174,19 +174,19 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.9245283, g: 0.08431224, b: 0.10737704, a: 1}
-      key1: {r: 0.91823894, g: 0.54497576, b: 0.118389234, a: 0.47058824}
-      key2: {r: 0.8930817, g: 0.85647297, b: 0.11514569, a: 0}
-      key3: {r: 0.1880864, g: 0.8867924, b: 0.10875745, a: 0}
-      key4: {r: 0.11514569, g: 0.157856, b: 0.8930817, a: 0}
-      key5: {r: 0.52224064, g: 0.12192939, b: 0.8616352, a: 0}
+      key1: {r: 0.8805031, g: 0.119061574, b: 0.796894, a: 0.47058824}
+      key2: {r: 0.8805031, g: 0.119061574, b: 0.796894, a: 0}
+      key3: {r: 0.8805031, g: 0.119061574, b: 0.796894, a: 0}
+      key4: {r: 0.8805031, g: 0.119061574, b: 0.796894, a: 0}
+      key5: {r: 0.8805031, g: 0.119061574, b: 0.796894, a: 0}
       key6: {r: 0.8805031, g: 0.119061574, b: 0.796894, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 12208
-      ctime2: 21331
-      ctime3: 30712
-      ctime4: 42791
-      ctime5: 54227
+      ctime1: 65535
+      ctime2: 65535
+      ctime3: 65535
+      ctime4: 65535
+      ctime5: 65535
       ctime6: 65535
       ctime7: 0
       atime0: 0
@@ -198,8 +198,8 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
-      m_NumColorKeys: 7
+      m_ColorSpace: 0
+      m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0

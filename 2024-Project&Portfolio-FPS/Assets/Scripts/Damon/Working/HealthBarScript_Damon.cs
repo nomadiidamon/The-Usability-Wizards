@@ -15,9 +15,9 @@ public class HealthBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.instance.playerScript.GetCurrentHealth() < gameManager.instance.playerScript.HPOrig)
+        if (gameManager.instance.playerScript.GetHealth() < gameManager.instance.playerScript.HPOrig)
         {
-            gameManager.instance.SetPlayersCurrentHealth(gameManager.instance.playerScript.GetCurrentHealth());
+            gameManager.instance.SetPlayersCurrentHealth(gameManager.instance.playerScript.GetHealth());
         }
     }
 }

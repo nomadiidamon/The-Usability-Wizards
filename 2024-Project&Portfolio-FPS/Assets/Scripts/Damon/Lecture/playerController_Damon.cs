@@ -9,9 +9,29 @@ public class playerController : MonoBehaviour, IDamage
 
     [SerializeField] int HP;
 
-    public int GetCurrentHealth()
+    public int GetHealth()
     {
         return HP;
+    }
+    public void SetHealth(int amount)
+    {
+        HP = amount;
+    }
+    public int GetSpeed()
+    {
+        return speed;
+    }
+    public void SetSpeed(int amount)
+    {
+        speed = amount;
+    }
+    public int GetDamage()
+    {
+        return shootDamage;
+    }
+    public void SetDamage(int amount)
+    {
+        shootDamage = amount;
     }
 
     [SerializeField] int speed;
