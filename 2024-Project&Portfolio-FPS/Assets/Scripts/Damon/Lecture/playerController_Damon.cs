@@ -102,24 +102,24 @@ public class playerController : MonoBehaviour, IDamage
     IEnumerator shoot()
     {
         isShooting = true;
+        Instantiate(bullet, shootPos.position, shootPos.rotation);
+
 
         //lineRenderer.SetPosition(0, Camera.main.transform.position);
+        //RaycastHit hit;
+        //if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, shootDist, ~ignoreMask))
+        //{
+        //    //lineRenderer.SetPosition(1, hit.point);
 
-        RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, shootDist, ~ignoreMask))
-        {
-            //lineRenderer.SetPosition(1, hit.point);
-
-            Instantiate(bullet, shootPos.position, shootPos.rotation);
-            //Debug.Log(hit.collider.name);
-            IDamage dmg = hit.collider.GetComponent<IDamage>();
+        //    //Debug.Log(hit.collider.name);
+        //    IDamage dmg = hit.collider.GetComponent<IDamage>();
             
-            if (dmg != null)
-            {
-                dmg.takeDamage(shootDamage);
-            }
+        //    if (dmg != null)
+        //    {
+        //        dmg.takeDamage(shootDamage);
+        //    }
 
-        }
+        //}
 
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
