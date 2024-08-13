@@ -116,7 +116,10 @@ MonoBehaviour:
   agent: {fileID: 4461614496584474069}
   model: {fileID: 2708193564407520867}
   shootPos: {fileID: 6054635133671846088}
+  headPos: {fileID: 4730425431523208906}
   HP: 3
+  viewAngle: 90
+  facePlayerSpeed: 5
   bullet: {fileID: 3121373984394139885, guid: 05d87cf04c06b884fba89a9bd6d956c3, type: 3}
   shootRate: 0.5
 --- !u!195 &4461614496584474069
@@ -151,7 +154,7 @@ Animator:
   m_GameObject: {fileID: 990113112396368257}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f4209d51d1ad0434299f2d498ee076ba, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffe03419b0bb4fa4b84921f1ee9d49b2, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -8,14 +8,23 @@ public class enemyAI : MonoBehaviour, IDamage
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Renderer model;
     [SerializeField] Transform shootPos;
+    [SerializeField] Transform headPos;
 
     [SerializeField] int HP;
+    [SerializeField] int viewAngle;
+    [SerializeField] int facePlayerSpeed;
+    
+
 
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
 
     bool isShooting;
     bool playerInRange;
+
+    float angleToPlayer;
+
+    Vector3 playerDir;
 
     Color colorOrig;
 
@@ -29,14 +38,46 @@ public class enemyAI : MonoBehaviour, IDamage
     // Update is called once per frame
     void Update()
     {
-        if (playerInRange)
+        if (playerInRange && canSeePlayer())
         {
-            agent.SetDestination(gameManager.instance.player.transform.position);
 
-            if (!isShooting)
-               StartCoroutine(shoot());
             
         }
+    }
+
+    bool canSeePlayer ()
+    {
+        playerDir = gameManager.instance.player.transform.position - headPos.position;
+        angleToPlayer = Vector3.Angle(playerDir, transform.forward);
+
+        Debug.Log(angleToPlayer);
+        Debug.DrawRay(headPos.position, playerDir);
+
+        RaycastHit hit;
+        if (Physics.Raycast(headPos.position, playerDir, out hit))
+        {
+            if (hit.collider.CompareTag("Player") && angleToPlayer <= viewAngle)
+            {
+                agent.SetDestination(gameManager.instance.player.transform.position);
+                if (!isShooting)
+                    StartCoroutine(shoot());
+
+                if (agent.remainingDistance <= agent.stoppingDistance)
+                    facePlayer();
+
+                return true;
+            }
+         
+            
+        }
+        return false;
+
+    }
+
+    void facePlayer()
+    {
+        Quaternion rot = Quaternion.LookRotation(playerDir);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * facePlayerSpeed);
     }
 
     public void takeDamage(int amount)
