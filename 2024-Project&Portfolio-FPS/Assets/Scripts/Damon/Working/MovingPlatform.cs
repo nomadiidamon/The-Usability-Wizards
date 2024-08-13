@@ -7,33 +7,38 @@ public class MovingPlatform : MonoBehaviour
 {
 
     [SerializeField] Vector3 startingPoint;
+    private Vector3 currentPosition;
     [SerializeField] Vector3 endingPoint;
     [SerializeField] float speed;
     [SerializeField] int timeUntilReturn;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
-            movePlatform();
+        currentPosition = startingPoint;
+        //movePlatform();
     }
 
     // Update is called once per frame
     void Update()
     {
-        movePlatform();
+        //movePlatform();
+        goUp();
+        goDown();
+    
     }
 
     public void goUp()
     {
-        this.transform.position += startingPoint * (speed*speed) * (Time.deltaTime);
-
+        currentPosition.y = endingPoint.y;
+        //startingPoint *= this.transform.position.y * speed * Time.deltaTime;
     }
 
     public void goDown()
     {
-        this.transform.position -= endingPoint * (speed * speed) * (Time.deltaTime);
+        if (currentPosition.y != endingPoint.y) { return; }
+            currentPosition.y -= startingPoint.y * (speed);
 
     }
 
@@ -41,6 +46,9 @@ public class MovingPlatform : MonoBehaviour
     {
         goUp();
         yield return new WaitForSeconds(timeUntilReturn);
-        goDown();
+        if (this.transform.position == endingPoint)
+        {
+            goDown();
+        }
     }
 }

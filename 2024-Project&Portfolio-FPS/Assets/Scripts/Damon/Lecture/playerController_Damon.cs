@@ -20,6 +20,8 @@ public class playerController : MonoBehaviour, IDamage
     [SerializeField] int jumpSpeed;
     [SerializeField] int gravity;
 
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform shootPos;
     [SerializeField] int shootDamage;
     [SerializeField] int shootDist;
     [SerializeField] float shootRate;
@@ -100,6 +102,7 @@ public class playerController : MonoBehaviour, IDamage
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, shootDist, ~ignoreMask))
         {
+            Instantiate(bullet, shootPos.position, shootPos.rotation);
             Debug.Log(hit.collider.name);
             IDamage dmg = hit.collider.GetComponent<IDamage>();
             
@@ -117,7 +120,8 @@ public class playerController : MonoBehaviour, IDamage
     public void takeDamage(int amount)
     {
         HP -= amount;
-        gameManager.instance.SetPlayersCurrentHealth(HP);
+        //gameManager.instance.SetPlayersCurrentHealth(HP);
+
         // I'm dead!
         if (HP <= 0)
         {
