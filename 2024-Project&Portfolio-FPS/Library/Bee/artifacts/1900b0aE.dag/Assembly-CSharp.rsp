@@ -370,13 +370,6 @@
 "Assets/Scripts/Damon/Working/MovingPlatform.cs"
 "Assets/Scripts/Dylan/PickUp_Dylan.cs"
 "Assets/Scripts/Hiry/doorFunction.cs"
-"Assets/Scripts/Johnny/buttonFunctions.cs"
-"Assets/Scripts/Johnny/cameraController.cs"
-"Assets/Scripts/Johnny/damage.cs"
-"Assets/Scripts/Johnny/enemyAI.cs"
-"Assets/Scripts/Johnny/gameManager.cs"
-"Assets/Scripts/Johnny/IDamage.cs"
-"Assets/Scripts/Johnny/playerController.cs"
 -langversion:9.0
 /deterministic
 /optimize+

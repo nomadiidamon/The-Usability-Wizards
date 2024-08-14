@@ -105,7 +105,11 @@ public class enemyAI : MonoBehaviour, IDamage
     {
         isShooting = true;
 
-        Instantiate(bullet, shootPos.position, transform.rotation);
+        Vector3 direction = gameManager.instance.player.transform.position - shootPos.transform.position;
+        direction.Normalize();
+
+        Quaternion bulletRotation = Quaternion.LookRotation(direction);
+        Instantiate(bullet, shootPos.transform.position, bulletRotation);
 
         yield return new WaitForSeconds(shootRate);
         isShooting = false;

@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212835864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonFunctions, Assembly-CSharp
         m_MethodName: resume
         m_Mode: 1
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212835864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonFunctions, Assembly-CSharp
         m_MethodName: quit
         m_Mode: 1
@@ -2708,7 +2708,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212835864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonFunctions, Assembly-CSharp
         m_MethodName: quit
         m_Mode: 1
@@ -3170,7 +3170,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212835864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonFunctions, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
@@ -3310,7 +3310,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1074683011}
   m_Father: {fileID: 1358964208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
@@ -3325,10 +3326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dcd41a6ff61074e8914b9b3a0d74be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 300
-  lockVertMin: -90
-  lockVertMax: 90
-  invertY: 0
 --- !u!1 &989919549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,7 +3409,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212835864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonFunctions, Assembly-CSharp
         m_MethodName: restart
         m_Mode: 1
@@ -3527,6 +3524,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2dcd201984d4024c8951be81bdb8c42, type: 3}
+--- !u!1 &1074683010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1074683011}
+  m_Layer: 0
+  m_Name: shootPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1074683011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074683010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1074815667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3754,7 +3782,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212835864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonFunctions, Assembly-CSharp
         m_MethodName: quit
         m_Mode: 1
@@ -3950,6 +3978,7 @@ GameObject:
   - component: {fileID: 1138956107}
   - component: {fileID: 1138956106}
   - component: {fileID: 1138956105}
+  - component: {fileID: 1138956109}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -4048,6 +4077,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1138956109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138956104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5341f73166b7b4ca464a825cb58a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuActive: {fileID: 0}
+  menuPause: {fileID: 492759288}
+  menuWin: {fileID: 1517194008}
+  menuLose: {fileID: 1101948701}
+  flashDamageScreen: {fileID: 300952626}
+  playersHealthPool: {fileID: 1525342361}
+  enemyCountText: {fileID: 540535704}
+  player: {fileID: 1358964204}
+  playerScript: {fileID: 0}
+  isPaused: 0
 --- !u!1001 &1180803407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4123,7 +4174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1212835862}
   - component: {fileID: 1212835863}
-  - component: {fileID: 1212835864}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -4159,29 +4209,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1212835861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38e931482ae22e346a0a8f939fda92ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuActive: {fileID: 0}
-  menuPause: {fileID: 492759288}
-  menuWin: {fileID: 1517194008}
-  menuLose: {fileID: 1101948701}
-  flashDamageScreen: {fileID: 300952626}
-  playerHPBar: {fileID: 1525342361}
-  enemyCountText: {fileID: 540535704}
-  player: {fileID: 0}
-  playerScript: {fileID: 0}
-  isPaused: 0
---- !u!114 &1212835864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212835861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8c1199641674740acf0d4b37510c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 2026c34172cc882429ce62069df0189b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1215557759
@@ -4965,23 +4993,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1358964204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69f99063665908d47990234cf8dad1d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b318dc9689203a46a9aa239f00673db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1358964210}
   ignoreMask:
     serializedVersion: 2
-    m_Bits: 8
-  health: 3
-  moveSpeed: 5
-  sprintMod: 3
-  jumpMax: 2
-  jumpSpeed: 12
-  gravity: 28
-  shootDamage: 1
-  shootRate: 0.5
-  shootDist: 500
-  flashTime: 0.5
+    m_Bits: 0
+  HP: 0
+  speed: 0
+  sprintMod: 0
+  jumpMax: 0
+  jumpSpeed: 0
+  gravity: 0
+  bullet: {fileID: 3121373984394139885, guid: 05d87cf04c06b884fba89a9bd6d956c3, type: 3}
+  shootPos: {fileID: 1074683011}
+  shootDamage: 0
+  shootDist: 0
+  shootRate: 0
+  HPOrig: 0
 --- !u!143 &1358964210
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6186,7 +6216,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212835864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonFunctions, Assembly-CSharp
         m_MethodName: restart
         m_Mode: 1
@@ -6590,7 +6620,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212835864}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: buttonFunctions, Assembly-CSharp
         m_MethodName: restart
         m_Mode: 1
@@ -7591,15 +7621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409ac068bd1bf3a4681a27adab6162b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 4550798860016938768}
-  model: {fileID: 4550798860013338137}
-  shootPos: {fileID: 1797183898}
-  headPos: {fileID: 4550798860016938813}
-  health: 3
-  viewAngle: 90
-  facePlayerSpeed: 10
-  bullet: {fileID: 6710072116674345302, guid: 7e33c562731bc5a49afa538c3a94237f, type: 3}
-  shootRate: 0.5
 --- !u!136 &4550798860016938767
 CapsuleCollider:
   m_ObjectHideFlags: 0

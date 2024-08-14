@@ -65,18 +65,11 @@
     <Compile Include="Assets\Scripts\Damon\Lecture\IDamage_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\buttonFunctions_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Working\HealthBarScript_Damon.cs" />
-    <Compile Include="Assets\Scripts\Johnny\IDamage.cs" />
-    <Compile Include="Assets\Scripts\Johnny\enemyAI.cs" />
-    <Compile Include="Assets\Scripts\Johnny\buttonFunctions.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
     <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Working\MovingPlatform.cs" />
-    <Compile Include="Assets\Scripts\Johnny\playerController.cs" />
-    <Compile Include="Assets\Scripts\Johnny\gameManager.cs" />
     <Compile Include="Assets\Scripts\Dylan\PickUp_Dylan.cs" />
-    <Compile Include="Assets\Scripts\Johnny\damage.cs" />
-    <Compile Include="Assets\Scripts\Johnny\cameraController.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\Damage_Damon.cs" />
   </ItemGroup>
   <ItemGroup>
