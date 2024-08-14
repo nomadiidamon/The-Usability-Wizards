@@ -9,7 +9,7 @@ public class HealthBarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager.instance.SetPlayersCurrentHealth(gameManager.instance.playerScript.HPOrig);
+       // gameManager.instance.SetPlayersCurrentHealth(gameManager.instance.playerScript.HPOrig);
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class HealthBarScript : MonoBehaviour
     {
         if (gameManager.instance.playerScript.GetHealth() < gameManager.instance.playerScript.HPOrig)
         {
-            gameManager.instance.SetPlayersCurrentHealth(gameManager.instance.playerScript.GetHealth());
+           // gameManager.instance.SetPlayersCurrentHealth(gameManager.instance.playerScript.GetHealth());
         }
     }
 }
