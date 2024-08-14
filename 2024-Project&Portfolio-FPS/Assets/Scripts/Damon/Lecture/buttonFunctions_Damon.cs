@@ -8,18 +8,23 @@ public class buttonFunctions : MonoBehaviour
 
     public void resume()
     {
+        Debug.Log("Resumed");
+
         gameManager.instance.stateUnpause();
     }
 
     public void restart()
     {
+        Debug.Log("Restarted");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         gameManager.instance.stateUnpause();
     }
 
     public void quit()
     {
-    #if UNITY_EDITOR
+        Debug.Log("Quitting");
+
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
     #else
         Application.Quit();

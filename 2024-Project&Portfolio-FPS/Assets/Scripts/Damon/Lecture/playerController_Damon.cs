@@ -148,12 +148,16 @@ public class playerController : MonoBehaviour, IDamage
     public void takeDamage(int amount)
     {
         HP -= amount;
-        //gameManager.instance.SetPlayersCurrentHealth(HP);
+        if (HP < 0) { HP = 0; }
+
         updatePlayerUI();
         StartCoroutine(flashDamage());
+        
         // I'm dead!
         if (HP <= 0)
         {
+            gameManager.instance.isPaused = false;
+
             gameManager.instance.youLose();
         }
     }
