@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class enemyAI : MonoBehaviour, IDamage
 {
@@ -11,10 +12,11 @@ public class enemyAI : MonoBehaviour, IDamage
     [SerializeField] Transform headPos;
 
     [SerializeField] int HP;
+    [SerializeField] int startingHealth;
     [SerializeField] int viewAngle;
     [SerializeField] int facePlayerSpeed;
-    
 
+    [SerializeField] Image hpbar;
 
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
@@ -31,8 +33,11 @@ public class enemyAI : MonoBehaviour, IDamage
     // Start is called before the first frame update
     void Start()
     {
+        HP = startingHealth;
         colorOrig = model.material.color;
         gameManager.instance.updateGameGoal(1);
+
+        updateHPBar();
     }
 
     // Update is called once per frame
@@ -45,6 +50,11 @@ public class enemyAI : MonoBehaviour, IDamage
         }
 
 
+    }
+
+    int getHealth()
+    {
+        return HP;
     }
 
     bool canSeePlayer ()
@@ -85,6 +95,7 @@ public class enemyAI : MonoBehaviour, IDamage
     {
         HP -= amount;
 
+        updateHPBar();
         StartCoroutine(flashRed());
 
         if (HP <= 0)
@@ -128,6 +139,14 @@ public class enemyAI : MonoBehaviour, IDamage
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+        }
+    }
+
+    void updateHPBar()
+    {
+        if (hpbar != null)
+        {
+            hpbar.fillAmount = (float)HP / startingHealth;
         }
     }
 
