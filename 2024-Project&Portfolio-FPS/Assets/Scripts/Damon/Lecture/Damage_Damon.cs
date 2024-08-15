@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Damage : MonoBehaviour
@@ -10,6 +9,14 @@ public class Damage : MonoBehaviour
     [SerializeField] Rigidbody rb;
 
     [SerializeField] int damageAmount;
+    public int GetDamageAmount()
+    {
+        return damageAmount;
+    }
+    public void SetDamageAmount(int amount)
+    {
+        damageAmount = amount;
+    }
     [SerializeField] float damageDelay;
     [SerializeField] int speed;
     [SerializeField] int destroyTime;
