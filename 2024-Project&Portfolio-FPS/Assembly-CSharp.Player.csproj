@@ -61,14 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Damon\Lecture\playerController_Damon.cs" />
+    <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
+    <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\cameraController_Damon.cs" />
     <Compile Include="Assets\Scripts\Johnny\TurretControl.cs" />
+    <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\IDamage_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\buttonFunctions_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Working\HealthBarScript_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
-    <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
     <Compile Include="Assets\Scripts\Dylan\PickUp_Dylan.cs" />
     <Compile Include="Assets\Scripts\Dylan\meleeAI_Dylan.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\Damage_Damon.cs" />
@@ -859,10 +859,6 @@
       <Project>{B1243115-C6CA-1C6C-E3EB-C0CA23D56008}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{9DB39BB8-D204-415F-70D5-58D2E54444D8}</Project>
-      <Name>UnityEngine.UI.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Player.csproj">
       <Project>{0145671F-475A-0864-1E28-E87637E97923}</Project>
       <Name>Unity.AI.Navigation.Player</Name>
@@ -870,6 +866,10 @@
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{EDEFC368-30A4-CCE7-40DB-98D5ADB028D9}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{9DB39BB8-D204-415F-70D5-58D2E54444D8}</Project>
+      <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

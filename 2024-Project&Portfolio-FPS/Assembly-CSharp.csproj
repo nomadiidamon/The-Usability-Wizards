@@ -61,14 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Damon\Lecture\playerController_Damon.cs" />
+    <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
+    <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\cameraController_Damon.cs" />
     <Compile Include="Assets\Scripts\Johnny\TurretControl.cs" />
+    <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\IDamage_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\buttonFunctions_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Working\HealthBarScript_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
-    <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
     <Compile Include="Assets\Scripts\Dylan\PickUp_Dylan.cs" />
     <Compile Include="Assets\Scripts\Dylan\meleeAI_Dylan.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\Damage_Damon.cs" />
@@ -931,10 +931,6 @@
       <Project>{39E546A7-A8EC-5D21-7D9A-0A32035E16F0}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{16E905C4-D8ED-2DE4-9449-4E0ABDA9FA96}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
       <Project>{F2C12EA0-E48F-6A22-6268-A276DEB9DFB3}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
@@ -975,21 +971,21 @@
       <Project>{6ACB2CD7-C530-D1C3-21A3-4D84A1D4F800}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{A280D613-5824-68B1-447A-2556903C712E}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{CEFDACE0-9175-D22E-9FAE-86CB8CAB5A0D}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{5DA6C202-654D-FBCE-A48F-616B96C590C3}</Project>
-      <Name>Unity.Rider.Editor</Name>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{A280D613-5824-68B1-447A-2556903C712E}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Editor.csproj">
       <Project>{777A0746-CC7B-A911-C7FA-70950F049B86}</Project>
       <Name>Unity.AI.Navigation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{5DA6C202-654D-FBCE-A48F-616B96C590C3}</Project>
+      <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
       <Project>{07669983-5DA3-8466-2DA8-E062F0017705}</Project>
@@ -998,6 +994,10 @@
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{C3D1670B-CDED-B5F7-547B-0943AF547607}</Project>
       <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{16E905C4-D8ED-2DE4-9449-4E0ABDA9FA96}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

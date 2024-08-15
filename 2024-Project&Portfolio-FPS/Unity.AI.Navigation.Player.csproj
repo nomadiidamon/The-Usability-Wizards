@@ -63,8 +63,8 @@
     <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Runtime\NavMeshSurface.cs" />
     <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Runtime\NavMeshModifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Runtime\HelpUrls.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Runtime\NavMeshLink.cs" />
     <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Runtime\NavMeshModifierVolume.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Runtime\NavMeshLink.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Runtime\Unity.AI.Navigation.asmdef" />

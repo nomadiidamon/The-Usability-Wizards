@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6767009076287636083}
   - component: {fileID: 4360077409253042313}
   - component: {fileID: 554411243030301449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Damon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,6 +50,7 @@ MonoBehaviour:
   type: 0
   rb: {fileID: 4360077409253042313}
   damageAmount: 1
+  damageDelay: 1
   speed: 25
   destroyTime: 3
 --- !u!135 &6767009076287636083

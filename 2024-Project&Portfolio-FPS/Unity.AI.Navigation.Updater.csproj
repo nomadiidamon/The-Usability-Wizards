@@ -61,10 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Editor\Updater\NavMeshSceneConverter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Editor\Updater\BuiltInToNavMeshSurfaceConverterContainer.cs" />
     <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Editor\Updater\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Editor\Updater\NavMeshUpdaterEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Editor\Updater\NavMeshUpdaterUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Editor\Updater\BuiltInToNavMeshSurfaceConverterContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Editor\Updater\Unity.AI.Navigation.Updater.asmdef" />

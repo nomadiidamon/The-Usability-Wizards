@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    [SerializeField] enum damageType { bullet, stationary, impact }
+    [SerializeField] enum damageType { bullet, stationary }
     [SerializeField] damageType type;
     [SerializeField] Rigidbody rb;
 
@@ -22,13 +22,12 @@ public class Damage : MonoBehaviour
     [SerializeField] int destroyTime;
 
     bool isDamageable = true;
-    int originalLayer;
+    int player = 3;
     int immune = 9;                // layer 9 is immune
 
     // Start is called before the first frame update
     void Start()
     {
-        originalLayer = gameManager.instance.player.layer;
         if (type == damageType.bullet)
         {
             rb.velocity = transform.forward * speed;
@@ -49,7 +48,8 @@ public class Damage : MonoBehaviour
         if (damage != null)
         {
             damage.takeDamage(damageAmount);
-            StartCoroutine(delayedDamage());
+            if (type == damageType.stationary)
+            { StartCoroutine(delayedDamage()); }
         }
         if (type == damageType.bullet)
         { Destroy(gameObject); }
@@ -59,6 +59,6 @@ public class Damage : MonoBehaviour
     {
         gameManager.instance.player.layer = immune;              // layer 9 is immune
         yield return new WaitForSeconds(damageDelay);
-        gameManager.instance.player.layer = originalLayer;              // layer 3 is player
+        gameManager.instance.player.layer = player;              // layer 3 is player
     }
 }
