@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7758554210456878077}
-  - component: {fileID: 107637615829741074}
   m_Layer: 0
   m_Name: SpeedPickup
   m_TagString: Untagged
@@ -33,18 +32,6 @@ Transform:
   - {fileID: 6650007311913978664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &107637615829741074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3333085668395771500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 230d202dc724bea448bffa800e40d4ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &63931301462525030
 PrefabInstance:
   m_ObjectHideFlags: 0

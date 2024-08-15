@@ -81,6 +81,7 @@ public class PickUp_Dylan : MonoBehaviour
                 case pickUpType.speed:
                     {
                         gameManager.instance.playerScript.SetSpeed(gameManager.instance.playerScript.GetSpeed() + 3);
+                        gameManager.instance.playerScript.RaiseSpeed();
                         Destroy(gameObject);
                         break;
                     }
@@ -88,6 +89,7 @@ public class PickUp_Dylan : MonoBehaviour
                     {
                         gameManager.instance.playerScript.SetDamage(gameManager.instance.playerScript.GetDamage() + 1);
                         //gameManager.instance.playerScript.GetComponent<Damage>().SetDamageAmount(gameManager.instance.playerScript.GetComponent<Damage>().GetDamageAmount() + 1);
+                        gameManager.instance.playerScript.IncreaseDamage();
                         Destroy(gameObject);
                         break;
                     }
