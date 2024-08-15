@@ -42,6 +42,7 @@ public class playerController : MonoBehaviour, IDamage
     [SerializeField] int gravity;
 
     [SerializeField] GameObject bullet;
+
     [SerializeField] Transform shootPos;
     [SerializeField] int shootDamage;
     [SerializeField] int shootDist;
@@ -72,6 +73,7 @@ public class playerController : MonoBehaviour, IDamage
         if (!gameManager.instance.isPaused)
         {
             movement();
+
 
         }
         sprint();
@@ -122,6 +124,7 @@ public class playerController : MonoBehaviour, IDamage
     IEnumerator shoot()
     {
         isShooting = true;
+        DoubleCheckDamageLevels();
         Instantiate(bullet, shootPos.position, shootPos.rotation);
 
 
@@ -143,6 +146,15 @@ public class playerController : MonoBehaviour, IDamage
 
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
+    }
+
+    public void DoubleCheckDamageLevels()
+    {
+        int currentAmount = bullet.GetComponent<Damage>().GetDamageAmount();
+        if (currentAmount != shootDamage)
+        {
+            bullet.GetComponent<Damage>().SetDamageAmount(shootDamage);
+        }
     }
 
     public void takeDamage(int amount)

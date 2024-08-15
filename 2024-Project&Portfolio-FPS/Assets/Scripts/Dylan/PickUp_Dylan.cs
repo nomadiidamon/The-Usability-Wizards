@@ -39,7 +39,8 @@ public class PickUp_Dylan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(new Vector3(0f, 1f, 0f));
+
     }
     void SetObjectColor(Color color)
     {
@@ -75,6 +76,7 @@ public class PickUp_Dylan : MonoBehaviour
                 case pickUpType.damage:
                     {
                         gameManager.instance.playerScript.SetDamage(gameManager.instance.playerScript.GetDamage() + 1);
+                        //gameManager.instance.playerScript.GetComponent<Damage>().SetDamageAmount(gameManager.instance.playerScript.GetComponent<Damage>().GetDamageAmount() + 1);
                         Destroy(gameObject);
                         break;
                     }

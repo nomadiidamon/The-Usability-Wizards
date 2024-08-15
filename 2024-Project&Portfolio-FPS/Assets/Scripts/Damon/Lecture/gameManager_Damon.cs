@@ -61,7 +61,6 @@ public class gameManager : MonoBehaviour
 
     public void statePause()
     {
-        Debug.Log("Paused");
         isPaused = !isPaused;
         Time.timeScale = 0;
         Cursor.visible = true;
@@ -70,7 +69,6 @@ public class gameManager : MonoBehaviour
 
     public void stateUnpause()
     {
-        Debug.Log("Unpaused");
         isPaused = !isPaused;
         Time.timeScale = 1;
         Cursor.visible = false;
@@ -99,7 +97,6 @@ public class gameManager : MonoBehaviour
 
     public void youLose()
     {
-        Debug.Log("You Lose");
         if (isPaused)
         {
             isPaused = !isPaused;
