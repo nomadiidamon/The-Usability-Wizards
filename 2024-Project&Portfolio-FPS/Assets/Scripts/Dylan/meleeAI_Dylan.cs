@@ -9,11 +9,11 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Renderer model;
     [SerializeField] Transform headPos;
-<<<<<<< HEAD
-   // [SerializeField] BoxCollider hitbox;
-=======
-    //[SerializeField] BoxCollider hitbox;
->>>>>>> WorkingBackup/NewMain
+//<<<<<<< HEAD
+//   // [SerializeField] BoxCollider hitbox;
+//=======
+//    //[SerializeField] BoxCollider hitbox;
+//>>>>>>> WorkingBackup/NewMain
 
     [SerializeField] int HP;
     [SerializeField] int startingHealth;

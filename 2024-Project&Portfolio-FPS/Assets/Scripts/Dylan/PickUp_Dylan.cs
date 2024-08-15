@@ -49,11 +49,11 @@ public class PickUp_Dylan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        transform.Rotate(new Vector3(0f, 1f, 0f));
-=======
+//<<<<<<< HEAD
+//        //transform.Rotate(new Vector3(0f, 1f, 0f));
+//=======
         transform.Rotate(rotationAxis * rotationSpeed * Time.deltaTime);
->>>>>>> WorkingBackup/NewMain
+//>>>>>>> WorkingBackup/NewMain
 
     }
     void SetObjectColor(Color color)
@@ -93,10 +93,10 @@ public class PickUp_Dylan : MonoBehaviour
                     {
                         gameManager.instance.playerScript.SetDamage(gameManager.instance.playerScript.GetDamage() + 1);
                         //gameManager.instance.playerScript.GetComponent<Damage>().SetDamageAmount(gameManager.instance.playerScript.GetComponent<Damage>().GetDamageAmount() + 1);
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
                         gameManager.instance.playerScript.IncreaseDamage();
->>>>>>> WorkingBackup/NewMain
+//>>>>>>> WorkingBackup/NewMain
                         Destroy(gameObject);
                         break;
                     }

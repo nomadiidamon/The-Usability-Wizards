@@ -64,23 +64,13 @@
     <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
     <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\cameraController_Damon.cs" />
+    <Compile Include="Assets\Scripts\Damon\Lecture\MakeObjectSpin_Damon.cs" />
     <Compile Include="Assets\Scripts\Johnny\TurretControl.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\IDamage_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\buttonFunctions_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Working\HealthBarScript_Damon.cs" />
-=======
     <Compile Include="Assets\Scripts\Damon\Lecture\Checkpoint Script.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\IDamage_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\buttonFunctions_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Working\HealthBarScript_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\enemyAI_Damon.cs" />
-    <Compile Include="Assets\Scripts\Hiry\doorFunction.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\MakeObjectSpin_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
-    <Compile Include="Assets\Scripts\Damon\Working\MovingPlatform.cs" />
->>>>>>> WorkingBackup/NewMain
     <Compile Include="Assets\Scripts\Dylan\PickUp_Dylan.cs" />
     <Compile Include="Assets\Scripts\Dylan\meleeAI_Dylan.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\Damage_Damon.cs" />
@@ -445,13 +435,6 @@
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.5\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
-<<<<<<< HEAD
-=======
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
->>>>>>> WorkingBackup/NewMain
     <Reference Include="netstandard">
       <HintPath>D:\Unity\2022.3.40f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
       <Private>False</Private>
