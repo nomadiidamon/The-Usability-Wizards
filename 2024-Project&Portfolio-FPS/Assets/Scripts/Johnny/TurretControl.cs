@@ -62,6 +62,8 @@ public class TurretControl : MonoBehaviour, IDamage
 
         if (health <= 0)
         {
+            gameManager.instance.updateGameGoal(-1);
+
             Destroy(gameObject);
         }
     }

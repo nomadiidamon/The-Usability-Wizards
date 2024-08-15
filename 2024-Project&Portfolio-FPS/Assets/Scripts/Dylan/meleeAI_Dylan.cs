@@ -9,7 +9,7 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Renderer model;
     [SerializeField] Transform headPos;
-    [SerializeField] BoxCollider hitbox;
+    //[SerializeField] BoxCollider hitbox;
 
     [SerializeField] int HP;
     [SerializeField] int startingHealth;
@@ -93,7 +93,7 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
     public void takeDamage(int amount)
     {
         HP -= amount;
-
+        Debug.Log("You Hit me!");
         updateHPBar();
         StartCoroutine(flashRed());
 

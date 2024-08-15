@@ -1514,8 +1514,12 @@ MonoBehaviour:
   menuWin: {fileID: 4292888127461263188}
   menuLose: {fileID: 7919162680089734814}
   flashDamageScreen: {fileID: 957170193202929846}
+  restoreHealthScreen: {fileID: 0}
+  increaseDamageScreen: {fileID: 0}
+  raiseSpeedScreen: {fileID: 0}
   playersHealthPool: {fileID: 9171209080167684621}
   enemyCountText: {fileID: 3653566422451555927}
+  uiPrompt: {fileID: 0}
   player: {fileID: 0}
   playerScript: {fileID: 0}
   isPaused: 0
