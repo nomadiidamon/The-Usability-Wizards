@@ -18,6 +18,21 @@ public class buttonFunctions : MonoBehaviour
         Debug.Log("Restarted");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         gameManager.instance.stateUnpause();
+        gameManager.instance.CheckpointReached = false;
+        gameManager.instance.respawns = gameManager.instance.respawnsOriginal;
+    }
+
+    public void respawn()
+    {
+        if (!gameManager.instance.CheckpointReached || gameManager.instance.respawns == 0) { return; }
+        gameManager.instance.updateRespawnCount(-1);
+        Debug.Log("Second Chance!");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameManager.instance.SetPlayerLocation();
+        gameManager.instance.playerScript.SetHealth(gameManager.instance.playerScript.HPOrig / 3);
+        gameManager.instance.playerScript.updatePlayerUI();
+        gameManager.instance.stateUnpause();
+        gameManager.instance.respawns--;
     }
 
     public void quit()
@@ -30,5 +45,7 @@ public class buttonFunctions : MonoBehaviour
         Application.Quit();
     #endif
     }
+
+
 
 }

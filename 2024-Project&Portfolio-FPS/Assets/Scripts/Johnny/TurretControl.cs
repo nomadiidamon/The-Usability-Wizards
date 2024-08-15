@@ -30,6 +30,8 @@ public class TurretControl : MonoBehaviour, IDamage
         health = startingHealth;
         colorOriginal = model.material.color;
         UpdateHealthBar();
+        gameManager.instance.updateGameGoal(1);
+
     }
 
     // Update is called once per frame
@@ -60,6 +62,8 @@ public class TurretControl : MonoBehaviour, IDamage
 
         if (health <= 0)
         {
+            gameManager.instance.updateGameGoal(-1);
+
             Destroy(gameObject);
         }
     }

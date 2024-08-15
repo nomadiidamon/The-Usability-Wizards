@@ -15210,8 +15210,13 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp",
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1072909,
       "PayloadLength": 32523,
+=======
+      "PayloadOffset": 1457302,
+      "PayloadLength": 28302,
+>>>>>>> WorkingBackup/NewMain
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
@@ -15223,7 +15228,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1105519,
+=======
+      "PayloadOffset": 1485691,
+>>>>>>> WorkingBackup/NewMain
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -15464,10 +15473,12 @@
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll",
         "Assets/Scripts/Damon/Lecture/buttonFunctions_Damon.cs",
         "Assets/Scripts/Damon/Lecture/cameraController_Damon.cs",
+        "Assets/Scripts/Damon/Lecture/Checkpoint Script.cs",
         "Assets/Scripts/Damon/Lecture/Damage_Damon.cs",
         "Assets/Scripts/Damon/Lecture/enemyAI_Damon.cs",
         "Assets/Scripts/Damon/Lecture/gameManager_Damon.cs",
         "Assets/Scripts/Damon/Lecture/IDamage_Damon.cs",
+        "Assets/Scripts/Damon/Lecture/MakeObjectSpin_Damon.cs",
         "Assets/Scripts/Damon/Lecture/playerController_Damon.cs",
         "Assets/Scripts/Damon/Working/HealthBarScript_Damon.cs",
         "Assets/Scripts/Dylan/meleeAI_Dylan.cs",
@@ -15690,8 +15701,13 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
+<<<<<<< HEAD
       "PayloadOffset": 1105615,
       "PayloadLength": 8880,
+=======
+      "PayloadOffset": 1485787,
+      "PayloadLength": 9729,
+>>>>>>> WorkingBackup/NewMain
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
       "Outputs": [

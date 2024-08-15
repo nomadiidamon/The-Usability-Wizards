@@ -161,7 +161,7 @@ public class playerController : MonoBehaviour, IDamage
     {
         HP -= amount;
         if (HP < 0) { HP = 0; }
-
+        Debug.Log("Ouch!");
         updatePlayerUI();
         StartCoroutine(flashDamage());
         
@@ -188,12 +188,35 @@ public class playerController : MonoBehaviour, IDamage
         gameManager.instance.restoreHealthScreen.SetActive(false);
     }
 
+    IEnumerator IncreaseDamageScreen()
+    {
+        gameManager.instance.increaseDamageScreen.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        gameManager.instance.increaseDamageScreen.SetActive(false);
+    }
+
+    IEnumerator RaiseSpeedScreen()
+    {
+        gameManager.instance.raiseSpeedScreen.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        gameManager.instance.raiseSpeedScreen.SetActive(false);
+    }
+
     public void RestoreHealth()
     {
         updatePlayerUI();
         StartCoroutine(RestoreHealthScreen());
     }
 
+    public void IncreaseDamage()
+    {
+        StartCoroutine(IncreaseDamageScreen());
+    }
+
+    public void RaiseSpeed()
+    {
+        StartCoroutine(RaiseSpeedScreen());
+    }
 
     public void updatePlayerUI()
     {

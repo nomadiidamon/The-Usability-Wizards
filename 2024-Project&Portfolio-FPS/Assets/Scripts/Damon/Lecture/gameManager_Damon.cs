@@ -13,17 +13,33 @@ public class gameManager : MonoBehaviour
     [SerializeField] GameObject menuWin;
     [SerializeField] GameObject menuLose;
     
-
+    
     public GameObject flashDamageScreen;
     public GameObject restoreHealthScreen;
+    public GameObject increaseDamageScreen;
+    public GameObject raiseSpeedScreen;
+
+    public GameObject RespawnLocation;
+    public bool CheckpointReached;
+
     public Image playersHealthPool;
     [SerializeField] TMP_Text enemyCountText;
+    [SerializeField] TMP_Text RespawnCount;
     [SerializeField] TMP_Text uiPrompt;
 
 
     public GameObject player;
+
+
+
+    public void SetPlayerLocation()
+    {
+        player.transform.position.Equals(RespawnLocation);
+    }
+
     public playerController playerScript;
-    
+    public int respawns;
+    public int respawnsOriginal;
 
     public bool isPaused;
 
@@ -37,6 +53,8 @@ public class gameManager : MonoBehaviour
         instance = this;
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<playerController>();
+        respawnsOriginal = respawns;
+        updateRespawnCount(respawns);
     }
 
     // Update is called once per frame
@@ -76,6 +94,12 @@ public class gameManager : MonoBehaviour
         menuActive.SetActive(isPaused);
         menuActive = null;
 
+    }
+
+    public void updateRespawnCount(int amount)
+    {
+        respawns += amount;
+        RespawnCount.text = respawns.ToString("F0");
     }
 
     public void updateGameGoal(int amount)
