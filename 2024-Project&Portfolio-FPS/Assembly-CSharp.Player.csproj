@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Damon\Lecture\playerController_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\cameraController_Damon.cs" />
+    <Compile Include="Assets\Scripts\Johnny\TurretControl.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\IDamage_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\buttonFunctions_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Working\HealthBarScript_Damon.cs" />

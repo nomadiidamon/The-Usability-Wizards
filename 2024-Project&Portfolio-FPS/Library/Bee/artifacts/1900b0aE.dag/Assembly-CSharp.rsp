@@ -369,6 +369,7 @@
 "Assets/Scripts/Dylan/meleeAI_Dylan.cs"
 "Assets/Scripts/Dylan/PickUp_Dylan.cs"
 "Assets/Scripts/Hiry/doorFunction.cs"
+"Assets/Scripts/Johnny/TurretControl.cs"
 -langversion:9.0
 /deterministic
 /optimize+

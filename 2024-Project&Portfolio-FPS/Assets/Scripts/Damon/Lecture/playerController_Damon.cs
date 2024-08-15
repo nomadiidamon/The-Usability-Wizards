@@ -169,6 +169,20 @@ public class playerController : MonoBehaviour, IDamage
         gameManager.instance.flashDamageScreen.SetActive(false);
     }
 
+    IEnumerator RestoreHealthScreen()
+    {
+        gameManager.instance.restoreHealthScreen.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        gameManager.instance.restoreHealthScreen.SetActive(false);
+    }
+
+    public void RestoreHealth()
+    {
+        updatePlayerUI();
+        StartCoroutine(RestoreHealthScreen());
+    }
+
+
     public void updatePlayerUI()
     {
         gameManager.instance.playersHealthPool.fillAmount = (float)HP / HPOrig;
