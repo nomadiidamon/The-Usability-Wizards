@@ -18,6 +18,7 @@ public class gameManager : MonoBehaviour
     public GameObject restoreHealthScreen;
     public Image playersHealthPool;
     [SerializeField] TMP_Text enemyCountText;
+    [SerializeField] TMP_Text uiPrompt;
 
 
     public GameObject player;
@@ -27,6 +28,8 @@ public class gameManager : MonoBehaviour
     public bool isPaused;
 
     int enemyCount;
+
+    private GameObject currentDoor;
 
     // Start is called before the first frame update
     void Awake()
@@ -107,6 +110,36 @@ public class gameManager : MonoBehaviour
         menuActive.SetActive(isPaused);
 
     }
+
+    public void UpdateUIPrompt(string message, GameObject door)
+    {
+        currentDoor = door;
+        uiPrompt.text = message;
+        uiPrompt.enabled = !string.IsNullOrEmpty(message);
+    }
+
+    public void ClearUIPrompt(GameObject door) 
+    {
+    
+        if (currentDoor == door)
+        {
+
+            uiPrompt.enabled = false;
+            currentDoor = null;
+
+        }
+
+    
+    }
+
+    public bool IsUIPromptActive()
+    {
+
+        return uiPrompt.enabled;
+
+
+    }
+
 
 
 

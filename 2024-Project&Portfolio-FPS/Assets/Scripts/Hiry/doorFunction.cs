@@ -11,9 +11,10 @@ public class doorFunction : MonoBehaviour
     [SerializeField] float doorAppearTime;
     [SerializeField] float doorDistance;
     [SerializeField] string doorButton = "Interact";
-    [SerializeField] TMP_Text uiPrompt;
+    [SerializeField] string promptMessage = "Press E to Open";
 
     Transform player;
+
     bool isNearDoor = false;
     bool isDoorActive = true;
 
@@ -22,7 +23,6 @@ public class doorFunction : MonoBehaviour
     {
 
         player = GameObject.FindWithTag("Player").transform;
-        uiPrompt.enabled = false;
 
     }
 
@@ -32,11 +32,12 @@ public class doorFunction : MonoBehaviour
         
         float distance = Vector3.Distance(player.position, door.transform.position);
         if (distance <= doorDistance && isDoorActive) 
-        { 
-        
-        isNearDoor = true;
-        uiPrompt.enabled = true;
-
+        {
+            if (!isNearDoor)
+            {
+                isNearDoor = true;
+                gameManager.instance.UpdateUIPrompt(promptMessage, gameObject);
+            }
             if (Input.GetButtonDown(doorButton))
             {
 
@@ -45,10 +46,13 @@ public class doorFunction : MonoBehaviour
         
         }
 
-        else
+        else if (isNearDoor)
         {
             isNearDoor = false;
-            uiPrompt.enabled = false;
+            gameManager.instance.ClearUIPrompt(gameObject);
+
+
+
         }
 
     }
@@ -57,11 +61,18 @@ public class doorFunction : MonoBehaviour
     {
         isDoorActive = false;
         door.SetActive(false);
-        uiPrompt.enabled = false;
+        gameManager.instance.ClearUIPrompt(gameObject);
         yield return new WaitForSeconds(doorAppearTime);
         door.SetActive(true);
         isDoorActive = true;
-        uiPrompt.enabled = true;
+
+        float distance = Vector3.Distance(player.position, door.transform.position);
+        if (distance <= doorDistance)
+        {
+
+            gameManager.instance.UpdateUIPrompt(promptMessage, gameObject);
+
+        }
         
     }
 
