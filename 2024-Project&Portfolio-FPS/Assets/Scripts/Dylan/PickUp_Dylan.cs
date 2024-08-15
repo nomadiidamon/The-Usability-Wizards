@@ -10,6 +10,10 @@ public class PickUp_Dylan : MonoBehaviour
 
     Color color = Color.white;           // default pick up color
 
+    float rotationSpeed = 1f;
+    Vector3 rotationAxis = Vector3.up;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +22,22 @@ public class PickUp_Dylan : MonoBehaviour
             case pickUpType.health:
                 {
                     color = Color.red;
+                    rotationSpeed = 75f;
+                    rotationAxis = Vector3.up;
                     break;
                 }
             case pickUpType.speed:
                 {
                     color = Color.blue;
+                    rotationSpeed = 75f;
+                    rotationAxis = Vector3.forward;
                     break;
                 }
             case pickUpType.damage:
                 {
                     color = Color.yellow;
+                    rotationSpeed = 75f;
+                    rotationAxis = Vector3.forward;
                     break;
                 }
             default:
@@ -39,7 +49,8 @@ public class PickUp_Dylan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0f, 1f, 0f));
+        transform.Rotate(rotationAxis * rotationSpeed * Time.deltaTime);
+
     }
     void SetObjectColor(Color color)
     {
@@ -58,6 +69,7 @@ public class PickUp_Dylan : MonoBehaviour
             {
                 case pickUpType.health:
                     {
+
                         if (gameManager.instance.playerScript.GetHealth() < gameManager.instance.playerScript.HPOrig)
                         {
                             gameManager.instance.playerScript.SetHealth(gameManager.instance.playerScript.GetHealth() + 1);
@@ -75,6 +87,7 @@ public class PickUp_Dylan : MonoBehaviour
                 case pickUpType.damage:
                     {
                         gameManager.instance.playerScript.SetDamage(gameManager.instance.playerScript.GetDamage() + 1);
+                        //gameManager.instance.playerScript.GetComponent<Damage>().SetDamageAmount(gameManager.instance.playerScript.GetComponent<Damage>().GetDamageAmount() + 1);
                         Destroy(gameObject);
                         break;
                     }
