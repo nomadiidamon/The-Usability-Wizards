@@ -15,6 +15,7 @@ public class gameManager : MonoBehaviour
     
 
     public GameObject flashDamageScreen;
+    public GameObject restoreHealthScreen;
     public Image playersHealthPool;
     [SerializeField] TMP_Text enemyCountText;
 
