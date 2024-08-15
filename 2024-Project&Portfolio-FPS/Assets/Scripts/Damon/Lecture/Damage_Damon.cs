@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Damage : MonoBehaviour
@@ -37,8 +38,8 @@ public class Damage : MonoBehaviour
             damage.takeDamage(damageAmount);
 
         }
-
-        Destroy(gameObject);
+        if (type == damageType.bullet)
+        { Destroy(gameObject); }
 
     }
 }
