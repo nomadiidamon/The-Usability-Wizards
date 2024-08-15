@@ -39,7 +39,7 @@ public class PickUp_Dylan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(new Vector3(0f, 1f, 0f));
     }
     void SetObjectColor(Color color)
     {
