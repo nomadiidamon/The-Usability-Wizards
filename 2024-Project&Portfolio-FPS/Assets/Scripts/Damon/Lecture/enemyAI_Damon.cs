@@ -8,6 +8,7 @@ public class enemyAI : MonoBehaviour, IDamage
 {
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Renderer model;
+    [SerializeField] Animator animator;
     [SerializeField] Transform shootPos;
     [SerializeField] Transform headPos;
 
@@ -17,16 +18,24 @@ public class enemyAI : MonoBehaviour, IDamage
     [SerializeField] int facePlayerSpeed;
 
     [SerializeField] Image hpbar;
+    [SerializeField] int roamDistance;
+    [SerializeField] int roamTimer;
+    [SerializeField] int animSpeedTrans;
 
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
+    //lecture shoot angle
+    [SerializeField] int shootAngle;
 
     bool isShooting;
     bool playerInRange;
+    bool isRoaming;
 
     float angleToPlayer;
+    float stoppingDistanceOriginal;
 
     Vector3 playerDir;
+    Vector3 startingPosition;
 
     Color colorOrig;
 
@@ -36,20 +45,45 @@ public class enemyAI : MonoBehaviour, IDamage
         HP = startingHealth;
         colorOrig = model.material.color;
         gameManager.instance.updateGameGoal(1);
-
+        stoppingDistanceOriginal = agent.stoppingDistance;
+        startingPosition = transform.position;
         updateHPBar();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerInRange && canSeePlayer())
+        float agentSpeed = agent.velocity.normalized.magnitude;
+        animator.SetFloat("Speed", Mathf.Lerp(animator.GetFloat("Speed"), agentSpeed, Time.deltaTime * animSpeedTrans));
+
+        if (playerInRange && !canSeePlayer())
         {
-
-
+            if(!isRoaming && agent.remainingDistance < 0.05f)
+                StartCoroutine(roam());
         }
+        else if (!playerInRange)
+        {
+            if (!isRoaming && agent.remainingDistance < 0.05f)
+                StartCoroutine(roam());
+        }
+  
 
+    }
 
+    IEnumerator roam()
+    {
+        isRoaming = true;
+        yield return new WaitForSeconds(roamTimer);
+
+        agent.stoppingDistance = 0;
+        Vector3 randomDistance = Random.insideUnitSphere * roamDistance;
+        randomDistance += startingPosition;
+
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDistance, out hit, roamDistance, 1);
+        agent.SetDestination(hit.position);
+
+        isRoaming = false;
     }
 
     int getHealth()
@@ -77,9 +111,11 @@ public class enemyAI : MonoBehaviour, IDamage
                 if (agent.remainingDistance <= agent.stoppingDistance)
                     facePlayer();
 
+                agent.stoppingDistance = stoppingDistanceOriginal;
                 return true;
             }
         }
+        agent.stoppingDistance = 0;
         return false;
 
     }
@@ -94,6 +130,8 @@ public class enemyAI : MonoBehaviour, IDamage
     public void takeDamage(int amount)
     {
         HP -= amount;
+        agent.SetDestination(gameManager.instance.player.transform.position);
+        StopCoroutine(roam());
 
         updateHPBar();
         StartCoroutine(flashRed());
@@ -139,6 +177,7 @@ public class enemyAI : MonoBehaviour, IDamage
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+            agent.stoppingDistance = 0;
         }
     }
 

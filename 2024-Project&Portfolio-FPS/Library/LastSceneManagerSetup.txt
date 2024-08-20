@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Final Prototype Scenes/LinearPath.unity
+- path: Assets/Scenes/Damon/Damon's Lecture Follow Along/Damon's Lecture Follow Along.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
