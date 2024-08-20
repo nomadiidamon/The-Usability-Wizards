@@ -11,6 +11,7 @@ public class enemyAI : MonoBehaviour, IDamage
     [SerializeField] Animator animator;
     [SerializeField] Transform shootPos;
     [SerializeField] Transform headPos;
+    [SerializeField] Collider meleeCollider;
 
     [SerializeField] int HP;
     [SerializeField] int startingHealth;
@@ -153,15 +154,35 @@ public class enemyAI : MonoBehaviour, IDamage
     IEnumerator shoot()
     {
         isShooting = true;
-
-        Vector3 direction = gameManager.instance.player.transform.position - shootPos.transform.position;
-        direction.Normalize();
-
-        Quaternion bulletRotation = Quaternion.LookRotation(direction);
-        Instantiate(bullet, shootPos.transform.position, bulletRotation);
+        animator.SetTrigger("Shoot");
+        //createProjectile();
+        //Vector3 direction = gameManager.instance.player.transform.position - shootPos.transform.position;
+        //direction.Normalize();
+        //Quaternion bulletRotation = Quaternion.LookRotation(direction);
+        //Instantiate(bullet, shootPos.transform.position, bulletRotation);
 
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
+    }
+
+    public void createProjectile()
+    {
+        Vector3 direction = gameManager.instance.player.transform.position - shootPos.transform.position;
+        direction.Normalize();
+        Quaternion bulletRotation = Quaternion.LookRotation(direction);
+        //Debug.Log("Pew!");
+        Instantiate(bullet, shootPos.transform.position, bulletRotation);
+    }
+
+    public void weaponColliderOn()
+    {
+        meleeCollider.enabled = true;
+    }
+
+    public void weaponColliderOff()
+    {
+        meleeCollider.enabled = false;
+
     }
 
     private void OnTriggerEnter(Collider other)

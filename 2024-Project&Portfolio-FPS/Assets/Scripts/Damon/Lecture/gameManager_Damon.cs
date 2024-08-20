@@ -13,13 +13,15 @@ public class gameManager : MonoBehaviour
     [SerializeField] GameObject menuWin;
     [SerializeField] GameObject menuLose;
     
+
+    public GameObject playerSpawnPosition;
     
     public GameObject flashDamageScreen;
     public GameObject restoreHealthScreen;
     public GameObject increaseDamageScreen;
     public GameObject raiseSpeedScreen;
 
-    public GameObject RespawnLocation;
+    public GameObject checkPointMenu;
     public bool CheckpointReached;
 
     public Image playersHealthPool;
@@ -32,10 +34,6 @@ public class gameManager : MonoBehaviour
 
 
 
-    public void SetPlayerLocation()
-    {
-        player.transform.position.Equals(RespawnLocation);
-    }
 
     public playerController playerScript;
     public int respawns;
@@ -55,6 +53,7 @@ public class gameManager : MonoBehaviour
         playerScript = player.GetComponent<playerController>();
         respawnsOriginal = respawns;
         updateRespawnCount(respawns);
+        playerSpawnPosition = GameObject.FindWithTag("Player Spawn Position");
     }
 
     // Update is called once per frame

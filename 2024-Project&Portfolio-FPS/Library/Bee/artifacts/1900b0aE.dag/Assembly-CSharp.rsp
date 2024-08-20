@@ -360,6 +360,7 @@
 "Assets/Scripts/Damon/Lecture/buttonFunctions_Damon.cs"
 "Assets/Scripts/Damon/Lecture/cameraController_Damon.cs"
 "Assets/Scripts/Damon/Lecture/Checkpoint Script.cs"
+"Assets/Scripts/Damon/Lecture/Checkpoint.cs"
 "Assets/Scripts/Damon/Lecture/Damage_Damon.cs"
 "Assets/Scripts/Damon/Lecture/enemyAI_Damon.cs"
 "Assets/Scripts/Damon/Lecture/gameManager_Damon.cs"

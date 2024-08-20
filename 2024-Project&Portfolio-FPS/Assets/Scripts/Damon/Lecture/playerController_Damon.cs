@@ -62,6 +62,16 @@ public class playerController : MonoBehaviour, IDamage
     {
         HPOrig = HP;
         updatePlayerUI();
+        spawnPlayer();
+    }
+
+    public void spawnPlayer()
+    {
+        HP = HPOrig;
+        updatePlayerUI();
+        controller.enabled = false;
+        transform.position = gameManager.instance.playerSpawnPosition.transform.position;
+        controller.enabled = true;
     }
 
     // Update is called once per frame
@@ -148,8 +158,9 @@ public class playerController : MonoBehaviour, IDamage
     public void takeDamage(int amount)
     {
         HP -= amount;
+        //Debug.Log("Ouch!");
         if (HP < 0) { HP = 0; }
-        Debug.Log("Ouch!");
+
         updatePlayerUI();
         StartCoroutine(flashDamage());
         
@@ -210,5 +221,7 @@ public class playerController : MonoBehaviour, IDamage
     {
         gameManager.instance.playersHealthPool.fillAmount = (float)HP / HPOrig;
     }
+
+
 
 }
