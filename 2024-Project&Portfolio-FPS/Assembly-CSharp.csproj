@@ -72,7 +72,9 @@
     <Compile Include="Assets\Scripts\Damon\Lecture\MakeObjectSpin_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\gameManager_Damon.cs" />
     <Compile Include="Assets\Scripts\Damon\Working\MovingPlatform.cs" />
+    <Compile Include="Assets\Scripts\Damon\Lecture\pickup.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\Checkpoint.cs" />
+    <Compile Include="Assets\Scripts\Damon\Lecture\gunStats.cs" />
     <Compile Include="Assets\Scripts\Dylan\PickUp_Dylan.cs" />
     <Compile Include="Assets\Scripts\Dylan\meleeAI_Dylan.cs" />
     <Compile Include="Assets\Scripts\Damon\Lecture\Damage_Damon.cs" />

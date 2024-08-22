@@ -4,43 +4,22 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour, IDamage
 {
+    [Header("-----Components-----")]
     [SerializeField] CharacterController controller;
     [SerializeField] LayerMask ignoreMask;
     //[SerializeField] LineRenderer lineRenderer;
 
-    [SerializeField] int HP;
+    [Header("-----Attributes-----")]
+    [Range(0, 10)] [SerializeField] int HP;
+    [Range(1, 5)] [SerializeField] int speed;
+    [Range(2, 4)] [SerializeField] int sprintMod;
+    [Range(1, 3)] [SerializeField] int jumpMax;
+    [Range(8, 20)] [SerializeField] int jumpSpeed;
+    [Range(15, 30)] [SerializeField] int gravity;
 
-    public int GetHealth()
-    {
-        return HP;
-    }
-    public void SetHealth(int amount)
-    {
-        HP = amount;
-    }
-    public int GetSpeed()
-    {
-        return speed;
-    }
-    public void SetSpeed(int amount)
-    {
-        speed = amount;
-    }
-    public int GetDamage()
-    {
-        return shootDamage;
-    }
-    public void SetDamage(int amount)
-    {
-        shootDamage = amount;
-    }
-
-    [SerializeField] int speed;
-    [SerializeField] int sprintMod;
-    [SerializeField] int jumpMax;
-    [SerializeField] int jumpSpeed;
-    [SerializeField] int gravity;
-
+    [Header("-----Guns-----")]
+    [SerializeField] List<gunStats> gunList = new List<gunStats>();
+    [SerializeField] GameObject gunModel;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform shootPos;
     [SerializeField] int shootDamage;
@@ -222,6 +201,43 @@ public class playerController : MonoBehaviour, IDamage
         gameManager.instance.playersHealthPool.fillAmount = (float)HP / HPOrig;
     }
 
+    public void getGunStats(gunStats gun)
+    {
+        gunList.Add(gun);
 
+        shootDamage = gun.shootDamage;
+        shootDist = gun.shootDistance;
+        shootRate = gun.shootRate;
+
+        gunModel.GetComponent<MeshFilter>().sharedMesh = gun.gunModel.GetComponent<MeshFilter>().sharedMesh;
+        gunModel.GetComponent<MeshRenderer>().sharedMaterial = gun.gunModel.GetComponent<MeshRenderer>().sharedMaterial;
+
+    }
+
+
+    public int GetHealth()
+    {
+        return HP;
+    }
+    public void SetHealth(int amount)
+    {
+        HP = amount;
+    }
+    public int GetSpeed()
+    {
+        return speed;
+    }
+    public void SetSpeed(int amount)
+    {
+        speed = amount;
+    }
+    public int GetDamage()
+    {
+        return shootDamage;
+    }
+    public void SetDamage(int amount)
+    {
+        shootDamage = amount;
+    }
 
 }
