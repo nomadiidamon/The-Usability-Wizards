@@ -20,6 +20,7 @@ public class playerController : MonoBehaviour, IDamage
     [Header("-----Guns-----")]
     [SerializeField] List<gunStats> gunList = new List<gunStats>();
     [SerializeField] GameObject gunModel;
+    [SerializeField] GameObject muzzleFlash;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform shootPos;
     [SerializeField] int shootDamage;
@@ -35,6 +36,8 @@ public class playerController : MonoBehaviour, IDamage
     bool isSprinting;
     bool isShooting;
 
+    public int selectedGun;
+    public List<gunStats> GetGunList() { return gunList; }
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +64,7 @@ public class playerController : MonoBehaviour, IDamage
         if (!gameManager.instance.isPaused)
         {
             movement();
-
+            selectGun();
         }
         sprint();
     }
@@ -89,8 +92,17 @@ public class playerController : MonoBehaviour, IDamage
         controller.Move(playerVel * Time.deltaTime);
         playerVel.y -= gravity * Time.deltaTime;
 
-        if (Input.GetButton("Shoot") && !isShooting)
+        if (gunList.Count < 1)
+        {
+            
+        }
+        else
+        {
+            if (Input.GetButton("Shoot") && !isShooting)
             StartCoroutine(shoot());
+
+        }
+
 
     }
 
@@ -110,9 +122,11 @@ public class playerController : MonoBehaviour, IDamage
 
     IEnumerator shoot()
     {
+        
         isShooting = true;
+        StartCoroutine(flashMuzzle());
         Instantiate(bullet, shootPos.position, shootPos.rotation);
-
+        //Instantiate(gunList[selectedGun].hitEffect, bullet.transform.position, Quaternion.identity);
 
         //lineRenderer.SetPosition(0, Camera.main.transform.position);
         //RaycastHit hit;
@@ -122,16 +136,27 @@ public class playerController : MonoBehaviour, IDamage
 
         //    //Debug.Log(hit.collider.name);
         //    IDamage dmg = hit.collider.GetComponent<IDamage>();
-            
+
         //    if (dmg != null)
         //    {
         //        dmg.takeDamage(shootDamage);
         //    }
+                //Instantiate(gunList[selectedGun].hitEffect, hit.point, Quaternion.identity);
 
         //}
 
+
+
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
+    }
+
+    IEnumerator flashMuzzle()
+    {
+        muzzleFlash.SetActive(true);
+        yield return new WaitForSeconds(.05f);
+        muzzleFlash.SetActive(false);
+
     }
 
     public void takeDamage(int amount)
@@ -204,7 +229,7 @@ public class playerController : MonoBehaviour, IDamage
     public void getGunStats(gunStats gun)
     {
         gunList.Add(gun);
-
+        selectedGun = gunList.Count - 1;
         shootDamage = gun.shootDamage;
         shootDist = gun.shootDistance;
         shootRate = gun.shootRate;
@@ -214,6 +239,31 @@ public class playerController : MonoBehaviour, IDamage
 
     }
 
+    void selectGun()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0 && selectedGun < gunList.Count -1)
+        {
+            selectedGun++;
+            changeGun();
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0 && selectedGun > 0)
+        {
+            selectedGun--;
+            changeGun();
+        }
+    }
+
+    void changeGun()
+    {
+        shootDamage = gunList[selectedGun].shootDamage;
+        bullet.GetComponent<Damage>().SetDamageAmount(shootDamage);
+        shootDist = gunList[selectedGun].shootDistance;
+        shootRate = gunList[selectedGun].shootRate;
+
+        gunModel.GetComponent<MeshFilter>().sharedMesh = gunList[selectedGun].gunModel.GetComponent<MeshFilter>().sharedMesh;
+        gunModel.GetComponent<MeshRenderer>().sharedMaterial = gunList[selectedGun].gunModel.GetComponent<MeshRenderer>().sharedMaterial;
+
+    }
 
     public int GetHealth()
     {

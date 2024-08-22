@@ -54,7 +54,10 @@ public class Damage : MonoBehaviour
             StartCoroutine(delayedDamage());
         }
         if (type == damageType.bullet)
-        { Destroy(gameObject); }
+        {
+            Instantiate(gameManager.instance.playerScript.GetGunList()[gameManager.instance.playerScript.selectedGun].hitEffect, this.transform.position, Quaternion.identity);
+            Destroy(gameObject); 
+        }
 
     }
 
