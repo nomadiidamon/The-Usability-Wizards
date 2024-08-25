@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickUp_Dylan : MonoBehaviour
 {
-    [SerializeField] enum pickUpType { health, speed, damage }              // types of pickups
+    [SerializeField] enum pickUpType { health, speed, damage , equipment}              // types of pickups
     [SerializeField] pickUpType type;
     [SerializeField] Rigidbody rbPickup;                                   // rigid body needed for collision detection
 
@@ -39,6 +39,12 @@ public class PickUp_Dylan : MonoBehaviour
                     rotationSpeed = 75f;
                     rotationAxis = Vector3.forward;
                     break;
+                }
+            case pickUpType.equipment:
+                {
+                    rotationSpeed = 75f;
+                    rotationAxis = Vector3.up;
+                    return;
                 }
             default:
                 break;
@@ -92,6 +98,10 @@ public class PickUp_Dylan : MonoBehaviour
                         gameManager.instance.playerScript.IncreaseDamage();
                         Destroy(gameObject);
                         break;
+                    }
+                case pickUpType.equipment:
+                    {
+                        return;
                     }
                 default:
                     break;

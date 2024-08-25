@@ -11,7 +11,7 @@ public class enemyAI : MonoBehaviour, IDamage
     [SerializeField] Animator animator;
     [SerializeField] Transform shootPos;
     [SerializeField] Transform headPos;
-    [SerializeField] Collider meleeCollider;
+    //[SerializeField] Collider meleeCollider;
 
     [SerializeField] int HP;
     [SerializeField] int startingHealth;
@@ -174,16 +174,16 @@ public class enemyAI : MonoBehaviour, IDamage
         Instantiate(bullet, shootPos.transform.position, bulletRotation);
     }
 
-    public void weaponColliderOn()
-    {
-        meleeCollider.enabled = true;
-    }
+    //public void weaponColliderOn()
+    //{
+    //    meleeCollider.enabled = true;
+    //}
 
-    public void weaponColliderOff()
-    {
-        meleeCollider.enabled = false;
+    //public void weaponColliderOff()
+    //{
+    //    meleeCollider.enabled = false;
 
-    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
