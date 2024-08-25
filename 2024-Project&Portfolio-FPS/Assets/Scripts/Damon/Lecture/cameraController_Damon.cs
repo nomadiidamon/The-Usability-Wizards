@@ -6,7 +6,7 @@ using UnityEngine;
 public class cameraController : MonoBehaviour
 {
 
-    [SerializeField] int sens;
+    public float sens;
     [SerializeField] int lockVertMin, lockVertMax;
     [SerializeField] bool invertY;
 
@@ -41,4 +41,10 @@ public class cameraController : MonoBehaviour
         transform.parent.Rotate(Vector3.up * mouseX);
 
     }
+
+    public void setSens(float newSens)
+    {
+        sens = newSens;
+    }
+
 }

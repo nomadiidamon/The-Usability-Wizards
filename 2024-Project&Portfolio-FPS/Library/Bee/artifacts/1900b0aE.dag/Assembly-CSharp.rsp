@@ -371,6 +371,7 @@
 "Assets/Scripts/Damon/Lecture/MakeObjectSpin_Damon.cs"
 "Assets/Scripts/Damon/Lecture/pickup.cs"
 "Assets/Scripts/Damon/Lecture/playerController_Damon.cs"
+"Assets/Scripts/Damon/Lecture/settings.cs"
 "Assets/Scripts/Damon/Working/HealthBarScript_Damon.cs"
 "Assets/Scripts/Damon/Working/MovingPlatform.cs"
 "Assets/Scripts/Dylan/meleeAI_Dylan.cs"
