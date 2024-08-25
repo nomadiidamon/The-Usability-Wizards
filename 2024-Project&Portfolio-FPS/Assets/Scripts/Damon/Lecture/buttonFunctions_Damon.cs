@@ -49,6 +49,25 @@ public class buttonFunctions : MonoBehaviour
     #endif
     }
 
+    public void openSettings()
+    {
+
+        Debug.Log("Opening Settings");
+
+        gameManager.instance.menuPause.SetActive(false);
+
+        gameManager.instance.menuActive = gameManager.instance.menuSettings;
+        gameManager.instance.menuSettings.SetActive(true);
+
+    }
+
+    public void closeSettings()
+    {
+        gameManager.instance.menuSettings.SetActive(false);
+        gameManager.instance.menuActive = gameManager.instance.menuPause;
+        gameManager.instance.menuPause.SetActive(true);
+    }
+
 
 
 }

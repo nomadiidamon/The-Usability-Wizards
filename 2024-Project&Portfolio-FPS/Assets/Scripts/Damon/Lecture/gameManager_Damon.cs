@@ -8,10 +8,11 @@ public class gameManager : MonoBehaviour
 {
     public static gameManager instance;
 
-    [SerializeField] GameObject menuActive;
-    [SerializeField] GameObject menuPause;
+    public GameObject menuActive;
+    public GameObject menuPause;
     [SerializeField] GameObject menuWin;
     [SerializeField] GameObject menuLose;
+    public GameObject menuSettings;
     
 
     public GameObject playerSpawnPosition;
@@ -31,7 +32,6 @@ public class gameManager : MonoBehaviour
 
 
     public GameObject player;
-
 
 
 
@@ -68,10 +68,20 @@ public class gameManager : MonoBehaviour
                 menuActive.SetActive(isPaused);
 
             }
+
             else if (menuActive == menuPause)
             {
                 stateUnpause();
             }
+
+            else if (menuActive == menuSettings)
+            {
+
+                stateUnpause();
+
+
+            }
+
 
         }
     }
@@ -87,6 +97,8 @@ public class gameManager : MonoBehaviour
 
     public void stateUnpause()
     {
+       
+        
         Debug.Log("Unpaused");
         isPaused = !isPaused;
         Time.timeScale = 1;
@@ -94,6 +106,7 @@ public class gameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         menuActive.SetActive(isPaused);
         menuActive = null;
+        
 
     }
 
