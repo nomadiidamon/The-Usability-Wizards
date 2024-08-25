@@ -13,7 +13,7 @@ public class TurretControl : MonoBehaviour, IDamage
     [SerializeField] int viewAngle;
     [SerializeField] int facePlayerSpeed;
     [SerializeField] Image hpbar;
-
+    [SerializeField] int damage;
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
 
@@ -31,6 +31,7 @@ public class TurretControl : MonoBehaviour, IDamage
         colorOriginal = model.material.color;
         UpdateHealthBar();
         gameManager.instance.updateGameGoal(1);
+        bullet.GetComponent<Damage>().SetDamageAmount(damage);
 
     }
 
@@ -78,6 +79,7 @@ public class TurretControl : MonoBehaviour, IDamage
         {
             if (hit.collider.CompareTag("Player") && angleToPlayer <= viewAngle)
             {
+                facePlayer();
                 if (!isShooting)
                 {
                     StartCoroutine(shoot());
@@ -93,8 +95,9 @@ public class TurretControl : MonoBehaviour, IDamage
 
     IEnumerator flashRed()
     {
+        Debug.Log("Flashing cause I got shot!");
         model.material.color = Color.red;
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(0.5f);
         model.material.color = colorOriginal;
     }
 

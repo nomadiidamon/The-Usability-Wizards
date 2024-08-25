@@ -5,19 +5,15 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    [SerializeField] enum damageType { bullet, stationary, impact }
+    [SerializeField] enum damageType { bullet, stationary, impact, enemyBullet }
     [SerializeField] damageType type;
     [SerializeField] Rigidbody rb;
+    [SerializeField] ParticleSystem targetHitEffect;
+
 
     [SerializeField] int damageAmount;
-    public int GetDamageAmount()
-    {
-        return damageAmount;
-    }
-    public void SetDamageAmount(int amount)
-    {
-        damageAmount = amount;
-    }
+    public int GetDamageAmount() { return damageAmount; }
+    public void SetDamageAmount(int amount) { damageAmount = amount; }
 
     [SerializeField] float damageDelay;
     [SerializeField] int speed;
@@ -31,7 +27,7 @@ public class Damage : MonoBehaviour
     void Start()
     {
         originalLayer = gameManager.instance.player.layer;
-        if (type == damageType.bullet)
+        if (type == damageType.bullet || type == damageType.enemyBullet)
         {
             rb.velocity = transform.forward * speed;
             Destroy(gameObject, destroyTime);
@@ -46,6 +42,12 @@ public class Damage : MonoBehaviour
             return;
         }
 
+        if (other.CompareTag("Environment"))
+        {
+            Instantiate(targetHitEffect, this.transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+
         IDamage damage = other.GetComponent<IDamage>();
 
         if (damage != null )
@@ -57,6 +59,11 @@ public class Damage : MonoBehaviour
         {
             Instantiate(gameManager.instance.playerScript.GetGunList()[gameManager.instance.playerScript.selectedGun].hitEffect, this.transform.position, Quaternion.identity);
             Destroy(gameObject); 
+        }
+        if (type == damageType.enemyBullet)
+        {
+            Instantiate(targetHitEffect, this.transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
 
     }
