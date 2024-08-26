@@ -26,7 +26,7 @@ public class enemyAI : MonoBehaviour, IDamage
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
     //lecture shoot angle
-    [SerializeField] int shootAngle;
+    //[SerializeField] int shootAngle;
 
     bool isShooting;
     bool playerInRange;

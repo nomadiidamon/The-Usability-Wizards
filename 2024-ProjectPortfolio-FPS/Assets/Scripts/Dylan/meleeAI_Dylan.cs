@@ -11,7 +11,7 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
     [SerializeField] Transform headPos;
     //[SerializeField] BoxCollider hitbox;
 
-    [SerializeField] int HP;
+    private int HP;
     [SerializeField] int startingHealth;
     [SerializeField] int viewAngle;
     [SerializeField] int facePlayerSpeed;

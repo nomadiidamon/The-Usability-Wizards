@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  rb: {fileID: 0}
+  rb: {fileID: 8637147424057101281}
+  targetHitEffect: {fileID: 577812841044345583, guid: fcb74f28d107e284e80af037bfec14ca, type: 3}
   damageAmount: 1
   damageDelay: 2
   speed: 3
@@ -156,7 +157,6 @@ MonoBehaviour:
   agent: {fileID: 8904690669904125481}
   model: {fileID: 1086421719842592401}
   headPos: {fileID: 4409373943936544761}
-  HP: 3
   startingHealth: 3
   viewAngle: 90
   facePlayerSpeed: 5
