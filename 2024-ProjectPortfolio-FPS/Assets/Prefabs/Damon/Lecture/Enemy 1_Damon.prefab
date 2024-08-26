@@ -547,7 +547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930245684390607350}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -7.357712, y: -8.356978, z: 2.996727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -571,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 3279710370638521175}
   model: {fileID: 3399873149566495825}
+  animator: {fileID: 2176174365748436954}
   shootPos: {fileID: 4680150978469414437}
   headPos: {fileID: 7103974935042376568}
   HP: 3
@@ -578,8 +579,12 @@ MonoBehaviour:
   viewAngle: 90
   facePlayerSpeed: 5
   hpbar: {fileID: 942767710059875622}
-  bullet: {fileID: 3121373984394139885, guid: 05d87cf04c06b884fba89a9bd6d956c3, type: 3}
+  roamDistance: 0
+  roamTimer: 0
+  animSpeedTrans: 0
+  bullet: {fileID: 3121373984394139885, guid: b18ac85634ea36a438f60d9b104e933c, type: 3}
   shootRate: 0.5
+  shootAngle: 0
 --- !u!195 &3279710370638521175
 NavMeshAgent:
   m_ObjectHideFlags: 0
