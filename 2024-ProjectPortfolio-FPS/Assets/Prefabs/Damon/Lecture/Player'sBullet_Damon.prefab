@@ -136,6 +136,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4360077409253042313, guid: 05d87cf04c06b884fba89a9bd6d956c3, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360077409253042313, guid: 05d87cf04c06b884fba89a9bd6d956c3, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 6289148044076221158, guid: 05d87cf04c06b884fba89a9bd6d956c3, type: 3}
       propertyPath: damageAmount
       value: 1
@@ -187,6 +195,10 @@ PrefabInstance:
     - target: {fileID: 6767009076287636083, guid: 05d87cf04c06b884fba89a9bd6d956c3, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767009076287636083, guid: 05d87cf04c06b884fba89a9bd6d956c3, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -9,7 +9,7 @@ public class TurretControl : MonoBehaviour, IDamage
     [SerializeField] Transform shootPos;
 
     [SerializeField] int health;
-    [SerializeField] int startingHealth;
+    private int startingHealth;
     [SerializeField] int viewAngle;
     [SerializeField] int facePlayerSpeed;
     [SerializeField] Image hpbar;
@@ -27,7 +27,7 @@ public class TurretControl : MonoBehaviour, IDamage
     // Start is called before the first frame update
     void Start()
     {
-        health = startingHealth;
+        startingHealth = health;
         colorOriginal = model.material.color;
         UpdateHealthBar();
         gameManager.instance.updateGameGoal(1);
@@ -54,7 +54,7 @@ public class TurretControl : MonoBehaviour, IDamage
 
     public void takeDamage(int amount)
     {
-        Debug.Log("Turret took damage");
+        Debug.Log("Turret took " + amount + " damage");
         health -= amount;
 
         UpdateHealthBar();  // Update the health bar after taking damage

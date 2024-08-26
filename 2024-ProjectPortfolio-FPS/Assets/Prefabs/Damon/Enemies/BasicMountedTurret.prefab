@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6808401310042550897}
   - component: {fileID: 6206534825428533037}
   - component: {fileID: 9215834515905166685}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 539801070420744669}
   - component: {fileID: 3403289278674673916}
   - component: {fileID: 2470707982750417268}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Current Enemy HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,11 +167,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4494799776433982328}
-  - component: {fileID: 5413363299993175842}
-  - component: {fileID: 4829363637281638967}
+  - component: {fileID: 5295986001868421888}
   - component: {fileID: 5854584583912322938}
   - component: {fileID: 1638131952690081094}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: BasicMountedTurret
   m_TagString: Stationary Enemy
   m_Icon: {fileID: 0}
@@ -198,7 +197,7 @@ Transform:
   - {fileID: 6808401310042550897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &5413363299993175842
+--- !u!114 &5295986001868421888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,63 +206,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3223909718420106941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 087e52591165231498ab4302371e0bea, type: 3}
+  m_Script: {fileID: 11500000, guid: 8604b40013c437a4db4d41cfca203444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 3950080930802721441}
   shootPos: {fileID: 7432454097478239520}
-  headPos: {fileID: 6618385681694616339}
-  projectile: {fileID: 3287213390385466787, guid: e200dac718d66b64baafa9bfb6d7ac52, type: 3}
-  muzzleFlash: {fileID: 4581953193325810353}
-  hpBar: {fileID: 2470707982750417268}
-  HP: 5
+  health: 10
   viewAngle: 342
-  facePlayerSpeed: 100
-  animSpeedTrans: 0
-  flashDamageTimer: 0.2
-  shootRate: 1
---- !u!23 &4829363637281638967
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3223909718420106941}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 8385f0e712bb65b428cf18e6ab1c29c6, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  facePlayerSpeed: 200
+  hpbar: {fileID: 2470707982750417268}
+  damage: 1
+  bullet: {fileID: 3287213390385466787, guid: e200dac718d66b64baafa9bfb6d7ac52, type: 3}
+  shootRate: 2
 --- !u!136 &5854584583912322938
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -320,7 +274,7 @@ GameObject:
   - component: {fileID: 240685543523392431}
   - component: {fileID: 588231683460631663}
   - component: {fileID: 4724315428342816164}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Enemy HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +377,7 @@ GameObject:
   - component: {fileID: 3870457775094877809}
   - component: {fileID: 651912864259048934}
   - component: {fileID: 5376089025505994008}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +461,7 @@ GameObject:
   - component: {fileID: 3699011962896771145}
   - component: {fileID: 5972042735620139993}
   - component: {fileID: 1144905878898153409}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Muzzle Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7432454097478239520}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Shoot Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +639,7 @@ GameObject:
   - component: {fileID: 1573098197022606106}
   - component: {fileID: 5659119678695181508}
   - component: {fileID: 9063633271656672512}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Enemy HP Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +714,7 @@ GameObject:
   - component: {fileID: 5336712200534962884}
   - component: {fileID: 6534334525870303896}
   - component: {fileID: 3950080930802721441}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Chamber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -842,7 +796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6618385681694616339}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Head Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,7 +829,7 @@ GameObject:
   - component: {fileID: 653641060086344150}
   - component: {fileID: 7553305078272260062}
   - component: {fileID: 1044954458880926804}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +912,7 @@ GameObject:
   - component: {fileID: 7498603676958555583}
   - component: {fileID: 5447312942937551222}
   - component: {fileID: 6591002417433677715}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Enemy HP Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

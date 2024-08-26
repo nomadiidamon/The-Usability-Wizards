@@ -134,6 +134,7 @@ public class enemyAI : MonoBehaviour, IDamage
         agent.SetDestination(gameManager.instance.player.transform.position);
         StopCoroutine(roam());
 
+        Debug.Log("Soldier took " + amount + " damage");
         updateHPBar();
         StartCoroutine(flashRed());
 

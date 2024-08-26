@@ -93,7 +93,7 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
     public void takeDamage(int amount)
     {
         HP -= amount;
-        Debug.Log("You Hit me!");
+        Debug.Log("Melee enemy took " + amount + " damage");
         updateHPBar();
         StartCoroutine(flashRed());
 
