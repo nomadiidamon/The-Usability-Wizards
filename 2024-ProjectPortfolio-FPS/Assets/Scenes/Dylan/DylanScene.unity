@@ -187,6 +187,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be340d8ebf719fd4b820be0210ea8ddd, type: 3}
+--- !u!114 &85988250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3807142087558244944, guid: 89c27f129871ce846af830d1864f4b65, type: 3}
+  m_PrefabInstance: {fileID: 5694387821547668804}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da98fde594583ed45a3e6195b64505cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &338661318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -352,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7105746403750826727, guid: da28065c098e628429a43469b5138015, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.328414
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 7105746403750826727, guid: da28065c098e628429a43469b5138015, type: 3}
       propertyPath: m_LocalPosition.y
@@ -411,7 +422,11 @@ PrefabInstance:
     - target: {fileID: 246958433671896695, guid: d7fce7cb45a18e04bba57c4dca7bac4c, type: 3}
       propertyPath: cameraController_Damon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 85988250}
+    - target: {fileID: 531621857862217989, guid: d7fce7cb45a18e04bba57c4dca7bac4c, type: 3}
+      propertyPath: menuSettings
+      value: 
+      objectReference: {fileID: 2132708570}
     - target: {fileID: 1489935145148015780, guid: d7fce7cb45a18e04bba57c4dca7bac4c, type: 3}
       propertyPath: m_Name
       value: UI
@@ -505,6 +520,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7fce7cb45a18e04bba57c4dca7bac4c, type: 3}
+--- !u!1 &2132708570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5337594422656988983, guid: d7fce7cb45a18e04bba57c4dca7bac4c, type: 3}
+  m_PrefabInstance: {fileID: 2132708569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2147168169
 PrefabInstance:
   m_ObjectHideFlags: 0
