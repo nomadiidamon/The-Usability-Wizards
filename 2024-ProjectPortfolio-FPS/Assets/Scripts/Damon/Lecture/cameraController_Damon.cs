@@ -8,7 +8,7 @@ public class cameraController : MonoBehaviour
 
     public float sens;
     [SerializeField] int lockVertMin, lockVertMax;
-    [SerializeField] bool invertY;
+    public bool invertY;
 
     float rotX;
 
@@ -47,9 +47,10 @@ public class cameraController : MonoBehaviour
         sens = newSens;
     }
 
-    public void SetInvertY(bool isInverted)
+    public void SetInvertY(bool toggle)
     {
-        invertY = isInverted;
+        invertY = toggle;
+        
     }
 
 

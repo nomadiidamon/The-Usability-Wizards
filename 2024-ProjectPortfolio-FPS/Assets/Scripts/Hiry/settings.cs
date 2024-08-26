@@ -10,6 +10,7 @@ public class settings : MonoBehaviour
 
     [SerializeField] Slider sensSlider;
     [SerializeField] Toggle sprintToggle;
+    [SerializeField] Toggle invertYToggle;
 
 
 
@@ -21,8 +22,13 @@ public class settings : MonoBehaviour
         sensSlider.value = cameraController_Damon.sens;
         sensSlider.onValueChanged.AddListener(cameraController_Damon.setSens);
 
+        invertYToggle.isOn = cameraController_Damon.invertY;
+        invertYToggle.onValueChanged.AddListener(cameraController_Damon.SetInvertY);
+
         sprintToggle.isOn = playerController_Damon.sprintToggle;
         sprintToggle.onValueChanged.AddListener(playerController_Damon.SetSprintToggle);
+
+        
 
     }
 
