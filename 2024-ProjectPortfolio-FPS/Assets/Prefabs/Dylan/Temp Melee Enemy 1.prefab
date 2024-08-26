@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  rb: {fileID: 0}
+  rb: {fileID: 8637147424057101281}
+  targetHitEffect: {fileID: 577812841044345583, guid: fcb74f28d107e284e80af037bfec14ca, type: 3}
   damageAmount: 1
   damageDelay: 2
   speed: 3
@@ -156,7 +157,6 @@ MonoBehaviour:
   agent: {fileID: 8904690669904125481}
   model: {fileID: 1086421719842592401}
   headPos: {fileID: 4409373943936544761}
-  HP: 3
   startingHealth: 3
   viewAngle: 90
   facePlayerSpeed: 5
@@ -172,7 +172,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -244,13 +244,13 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
