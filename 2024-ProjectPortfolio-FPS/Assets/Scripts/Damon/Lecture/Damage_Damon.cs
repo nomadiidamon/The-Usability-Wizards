@@ -60,7 +60,10 @@ public class Damage : MonoBehaviour
         if (type == damageType.bullet)
         {
             Instantiate(gameManager.instance.playerScript.GetGunList()[gameManager.instance.playerScript.selectedGun].hitEffect, this.transform.position, Quaternion.identity);
-            Instantiate(GameObject.Find("Platform"), this.transform.position, Quaternion.identity);
+            if (gameManager.instance.playerScript.isCreator)
+            { 
+                Instantiate(GameObject.Find("Platform"), this.transform.position, Quaternion.identity);
+            }
             Destroy(gameObject); 
         }
         if (type == damageType.enemyBullet)
