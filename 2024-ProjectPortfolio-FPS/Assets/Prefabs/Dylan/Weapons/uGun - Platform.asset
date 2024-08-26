@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac4c15d63ca800489dada8a320fe87c, type: 3}
   m_Name: uGun - Platform
   m_EditorClassIdentifier: 
-  gunModel: {fileID: 7640709515880187520, guid: 7087807ad0064614eaa8b110bdab1608, type: 3}
+  gunModel: {fileID: 1633769547079644342, guid: 2f7eaf670fff33941aabd0e5dfb3be86, type: 3}
   shootDamage: 0
   shootRate: 5
   shootDistance: 100
@@ -21,3 +21,4 @@ MonoBehaviour:
   hitEffect: {fileID: 0}
   shootSound: []
   shootVolume: 0.5
+  isCreator: 1

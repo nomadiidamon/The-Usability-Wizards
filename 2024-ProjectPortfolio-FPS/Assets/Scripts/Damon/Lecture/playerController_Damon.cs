@@ -26,6 +26,7 @@ public class playerController : MonoBehaviour, IDamage
     [SerializeField] int shootDamage;
     [SerializeField] int shootDist;
     [SerializeField] float shootRate;
+
     
     Vector3 move;
     Vector3 playerVel;
@@ -37,6 +38,7 @@ public class playerController : MonoBehaviour, IDamage
     bool isShooting;
 
     public int selectedGun;
+    public bool isCreator;
     public List<gunStats> GetGunList() { return gunList; }
 
     // Start is called before the first frame update
@@ -233,6 +235,7 @@ public class playerController : MonoBehaviour, IDamage
         shootDamage = gun.shootDamage;
         shootDist = gun.shootDistance;
         shootRate = gun.shootRate;
+        isCreator = gun.isCreator;
 
         gunModel.GetComponent<MeshFilter>().sharedMesh = gun.gunModel.GetComponent<MeshFilter>().sharedMesh;
         gunModel.GetComponent<MeshRenderer>().sharedMaterial = gun.gunModel.GetComponent<MeshRenderer>().sharedMaterial;
@@ -259,6 +262,7 @@ public class playerController : MonoBehaviour, IDamage
         bullet.GetComponent<Damage>().SetDamageAmount(shootDamage);
         shootDist = gunList[selectedGun].shootDistance;
         shootRate = gunList[selectedGun].shootRate;
+        isCreator = gunList[selectedGun].isCreator;
 
         gunModel.GetComponent<MeshFilter>().sharedMesh = gunList[selectedGun].gunModel.GetComponent<MeshFilter>().sharedMesh;
         gunModel.GetComponent<MeshRenderer>().sharedMaterial = gunList[selectedGun].gunModel.GetComponent<MeshRenderer>().sharedMaterial;

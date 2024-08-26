@@ -17,5 +17,7 @@ public class gunStats : ScriptableObject
     public AudioClip[] shootSound;
     public float shootVolume;
 
+    public bool isCreator;
+
 
 }
