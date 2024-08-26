@@ -2005,6 +2005,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 849a9d7ce61dddc439c85ff546ccc95b, type: 3}
+--- !u!114 &325185795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3920294392233784042, guid: 9ddd8b6b53a72aa4e9efdfc4702c0973, type: 3}
+  m_PrefabInstance: {fileID: 1678187522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &325720856 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 580519196751907757, guid: 9ddd8b6b53a72aa4e9efdfc4702c0973, type: 3}
@@ -10370,6 +10381,10 @@ PrefabInstance:
       propertyPath: sprintToggle
       value: 
       objectReference: {fileID: 9486960}
+    - target: {fileID: 3342679326824184376, guid: 9ddd8b6b53a72aa4e9efdfc4702c0973, type: 3}
+      propertyPath: invertYToggle
+      value: 
+      objectReference: {fileID: 325185795}
     - target: {fileID: 3342679326824184376, guid: 9ddd8b6b53a72aa4e9efdfc4702c0973, type: 3}
       propertyPath: cameraController_Damon
       value: 
