@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 
 //using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Damage : MonoBehaviour
 {
@@ -61,8 +62,8 @@ public class Damage : MonoBehaviour
         {
             Instantiate(gameManager.instance.playerScript.GetGunList()[gameManager.instance.playerScript.selectedGun].hitEffect, this.transform.position, Quaternion.identity);
             if (gameManager.instance.playerScript.isCreator)
-            { 
-                Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position, this.transform.rotation);
+            {
+                Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z/2), this.transform.rotation);
             }
             Destroy(gameObject); 
         }
