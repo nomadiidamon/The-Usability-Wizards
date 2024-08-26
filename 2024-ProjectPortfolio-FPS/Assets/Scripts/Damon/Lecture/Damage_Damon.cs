@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+
 //using Unity.VisualScripting;
 using UnityEngine;
 
@@ -58,6 +60,7 @@ public class Damage : MonoBehaviour
         if (type == damageType.bullet)
         {
             Instantiate(gameManager.instance.playerScript.GetGunList()[gameManager.instance.playerScript.selectedGun].hitEffect, this.transform.position, Quaternion.identity);
+            Instantiate(GameObject.Find("Platform"), this.transform.position, Quaternion.identity);
             Destroy(gameObject); 
         }
         if (type == damageType.enemyBullet)
