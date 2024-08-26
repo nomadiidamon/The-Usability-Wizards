@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class settings : MonoBehaviour
 {
+    [SerializeField] cameraController cameraController_Damon;
+    [SerializeField] playerController playerController_Damon;
 
     [SerializeField] Slider sensSlider;
-    [SerializeField] cameraController cameraController_Damon;
+    [SerializeField] Toggle sprintToggle;
 
 
 
@@ -17,14 +19,13 @@ public class settings : MonoBehaviour
 
 
         sensSlider.value = cameraController_Damon.sens;
-
         sensSlider.onValueChanged.AddListener(cameraController_Damon.setSens);
 
+        sprintToggle.isOn = playerController_Damon.sprintToggle;
+        sprintToggle.onValueChanged.AddListener(playerController_Damon.SetSprintToggle);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+   
 }
