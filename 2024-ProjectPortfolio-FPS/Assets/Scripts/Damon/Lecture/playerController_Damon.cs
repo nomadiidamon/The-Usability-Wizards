@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class playerController : MonoBehaviour, IDamage
@@ -26,7 +27,6 @@ public class playerController : MonoBehaviour, IDamage
     [SerializeField] int shootDamage;
     [SerializeField] int shootDist;
     [SerializeField] float shootRate;
-
     
     Vector3 move;
     Vector3 playerVel;
@@ -42,6 +42,9 @@ public class playerController : MonoBehaviour, IDamage
 
     public int selectedGun;
     public bool isCreator;
+
+    public GameObject objectHeld;           // object ready to shoot
+
     public List<gunStats> GetGunList() { return gunList; }
 
     // Start is called before the first frame update
@@ -92,6 +95,11 @@ public class playerController : MonoBehaviour, IDamage
         {
             jumpCount++;
             playerVel.y = jumpSpeed;
+        }
+
+        if (Input.GetButtonDown("Save Object"))
+        {
+            saveObjectBullet();
         }
 
         controller.Move(playerVel * Time.deltaTime);
@@ -341,4 +349,16 @@ public class playerController : MonoBehaviour, IDamage
         shootDamage = amount;
     }
 
+    public void saveObjectBullet()
+    {
+            RaycastHit hit;
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 50, ~ignoreMask))
+            {
+                Debug.Log(hit.collider.name);
+                if (hit.collider.CompareTag("Creatable"))
+                {
+                    objectHeld = hit.collider.gameObject;
+                }
+            }
+    }
 }

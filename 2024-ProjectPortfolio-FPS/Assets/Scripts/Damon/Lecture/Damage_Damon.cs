@@ -62,7 +62,7 @@ public class Damage : MonoBehaviour
             Instantiate(gameManager.instance.playerScript.GetGunList()[gameManager.instance.playerScript.selectedGun].hitEffect, this.transform.position, Quaternion.identity);
             if (gameManager.instance.playerScript.isCreator)
             { 
-                Instantiate(GameObject.Find("Platform"), this.transform.position, Quaternion.identity);
+                Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position, this.transform.rotation);
             }
             Destroy(gameObject); 
         }

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: HP
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2599902116755527791, guid: b2a77ab689ad3f0478eb6c1f0785d639, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4519858111990313243, guid: b2a77ab689ad3f0478eb6c1f0785d639, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
