@@ -37,6 +37,9 @@ public class playerController : MonoBehaviour, IDamage
     bool isSprinting;
     bool isShooting;
 
+    public bool sprintToggle;
+    bool sprintingPressed;
+
     public int selectedGun;
     public bool isCreator;
     public List<gunStats> GetGunList() { return gunList; }
@@ -110,16 +113,60 @@ public class playerController : MonoBehaviour, IDamage
 
     void sprint()
     {
-        if (Input.GetButtonDown("Sprint"))
+        if (sprintToggle)
         {
-            speed *= sprintMod;
-            isSprinting = true;
+            if (Input.GetButtonDown("Sprint"))
+            {
+                if (isSprinting)
+                {
+                    isSprinting = false;
+                }
+                else if (!isSprinting)
+                {
+                    isSprinting = true;
+                }
+
+                
+            }
+
+            if (Input.GetButtonDown("Sprint") && isSprinting)
+            {
+                
+                speed *= sprintMod;
+            }
+            else if (Input.GetButtonDown("Sprint") && !isSprinting)
+            {
+                speed /= sprintMod;
+
+            }
+
+
         }
-        else if (Input.GetButtonUp("Sprint"))
+        else
+        {
+            if (Input.GetButtonDown("Sprint"))
+            {
+                speed *= sprintMod;
+                isSprinting = true;
+            }
+            else if (Input.GetButtonUp("Sprint"))
+            {
+                speed /= sprintMod;
+                isSprinting = false;
+            }
+        }
+    }
+
+    public void SetSprintToggle(bool toggle)
+    {
+        sprintToggle = toggle;
+
+        if (!sprintToggle && isSprinting)
         {
             speed /= sprintMod;
             isSprinting = false;
         }
+
     }
 
     IEnumerator shoot()

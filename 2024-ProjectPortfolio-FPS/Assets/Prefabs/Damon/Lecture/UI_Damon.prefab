@@ -738,8 +738,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 238170607101285341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.47058824, y: 0}
+  m_AnchorMax: {x: 0.47058824, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1102,9 +1102,9 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
-  m_IsOn: 1
+          m_BoolArgument: 1
+        m_CallState: 1
+  m_IsOn: 0
 --- !u!1 &1807301653938621186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2344773000636166119
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1291,7 +1291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 151.12488, y: -146.24731}
+  m_AnchoredPosition: {x: 151.12488, y: -146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5892227526477271913
@@ -1684,7 +1684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2696921671384518352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1949,7 +1949,6 @@ GameObject:
   - component: {fileID: 5644522735673887356}
   - component: {fileID: 2466880176295908516}
   - component: {fileID: 2873228549978413577}
-  - component: {fileID: 3057514252846536010}
   m_Layer: 5
   m_Name: UI_Damon
   m_TagString: Untagged
@@ -2054,39 +2053,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3057514252846536010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153333014056894699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f5341f73166b7b4ca464a825cb58a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuActive: {fileID: 0}
-  menuPause: {fileID: 68401831589066027}
-  menuWin: {fileID: 4292888127461263188}
-  menuLose: {fileID: 7919162680089734814}
-  menuSettings: {fileID: 0}
-  playerSpawnPosition: {fileID: 0}
-  flashDamageScreen: {fileID: 957170193202929846}
-  restoreHealthScreen: {fileID: 8790658514185980166}
-  increaseDamageScreen: {fileID: 5725635364053485103}
-  raiseSpeedScreen: {fileID: 7293482538484365216}
-  checkPointMenu: {fileID: 0}
-  CheckpointReached: 0
-  playersHealthPool: {fileID: 9171209080167684621}
-  enemyCountText: {fileID: 3653566422451555927}
-  RespawnCount: {fileID: 7129572748241510608}
-  uiPrompt: {fileID: 8384181117690848029}
-  player: {fileID: 0}
-  playerScript: {fileID: 0}
-  respawns: 1
-  respawnsOriginal: 0
-  isPaused: 0
 --- !u!1 &4292888127461263188
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,7 +2298,7 @@ RectTransform:
   m_Father: {fileID: 2301813471390349919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.47058824, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3896,14 +3862,13 @@ MonoBehaviour:
   raiseSpeedScreen: {fileID: 7293482538484365216}
   checkPointMenu: {fileID: 0}
   CheckpointReached: 0
-  playersHealthPool: {fileID: 3378646710307807168}
+  playersHealthPool: {fileID: 9171209080167684621}
   enemyCountText: {fileID: 3653566422451555927}
-  RespawnCount: {fileID: 5890527232936318054}
+  RespawnCount: {fileID: 7129572748241510608}
   uiPrompt: {fileID: 8384181117690848029}
   player: {fileID: 0}
   playerScript: {fileID: 0}
   respawns: 0
-  respawnsOriginal: 0
   isPaused: 0
 --- !u!114 &3342679326824184376
 MonoBehaviour:

@@ -37,7 +37,8 @@ public class gameManager : MonoBehaviour
 
     public playerController playerScript;
     public int respawns;
-    public int respawnsOriginal;
+    int respawnsOriginal;
+    public int GetOriginalRespawnCount() {  return respawnsOriginal; }
 
     public bool isPaused;
 
@@ -54,6 +55,7 @@ public class gameManager : MonoBehaviour
         playerScript = player.GetComponent<playerController>();
         respawnsOriginal = respawns;
         updateRespawnCount(respawns);
+        playerScript.updatePlayerUI();
         playerSpawnPosition = GameObject.FindWithTag("Player Spawn Position");
     }
 

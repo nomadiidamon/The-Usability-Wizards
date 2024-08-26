@@ -19,7 +19,7 @@ public class buttonFunctions : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         gameManager.instance.stateUnpause();
         gameManager.instance.CheckpointReached = false;
-        gameManager.instance.respawns = gameManager.instance.respawnsOriginal;
+        gameManager.instance.respawns = gameManager.instance.GetOriginalRespawnCount();
     }
 
     public void respawn()
