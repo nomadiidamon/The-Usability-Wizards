@@ -48,6 +48,7 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
         instance = this;
         player = GameObject.FindWithTag("Player");
         playerScript = player.GetComponent<playerController>();

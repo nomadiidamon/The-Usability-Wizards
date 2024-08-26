@@ -47,4 +47,10 @@ public class cameraController : MonoBehaviour
         sens = newSens;
     }
 
+    public void SetInvertY(bool isInverted)
+    {
+        invertY = isInverted;
+    }
+
+
 }
