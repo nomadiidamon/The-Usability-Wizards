@@ -13,7 +13,7 @@ public class enemyAI : MonoBehaviour, IDamage
     [SerializeField] Transform headPos;
     //[SerializeField] Collider meleeCollider;
 
-    [SerializeField] int HP;
+    private int HP;
     [SerializeField] int startingHealth;
     [SerializeField] int viewAngle;
     [SerializeField] int facePlayerSpeed;

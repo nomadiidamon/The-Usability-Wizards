@@ -157,7 +157,7 @@ MonoBehaviour:
   agent: {fileID: 8904690669904125481}
   model: {fileID: 1086421719842592401}
   headPos: {fileID: 4409373943936544761}
-  startingHealth: 3
+  startingHealth: 5
   viewAngle: 90
   facePlayerSpeed: 5
   hpbar: {fileID: 7907223669641652906}
@@ -276,7 +276,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 10
+  m_Radius: 25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2552491777754191521
 GameObject:
