@@ -86,6 +86,7 @@ public class PickUp_Dylan : MonoBehaviour
                     }
                 case pickUpType.speed:
                     {
+                        
                         gameManager.instance.playerScript.SetSpeed(gameManager.instance.playerScript.GetSpeed() + 3);
                         gameManager.instance.playerScript.RaiseSpeed();
                         Destroy(gameObject);
