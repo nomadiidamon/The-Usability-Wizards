@@ -381,6 +381,7 @@
 "Assets/Scripts/Damon/Working/StationaryEnemy.cs"
 "Assets/Scripts/Dylan/meleeAI_Dylan.cs"
 "Assets/Scripts/Dylan/PickUp_Dylan.cs"
+"Assets/Scripts/Dylan/Water.cs"
 "Assets/Scripts/Hiry/doorFunction.cs"
 "Assets/Scripts/Hiry/settings.cs"
 "Assets/Scripts/Johnny/TurretControl.cs"

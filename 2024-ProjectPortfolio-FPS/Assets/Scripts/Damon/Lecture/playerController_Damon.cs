@@ -42,6 +42,7 @@ public class playerController : MonoBehaviour, IDamage
 
     public int selectedGun;
     public bool isCreator;
+    public bool isSwimming;
 
     public GameObject objectHeld;           // object ready to shoot
 
@@ -91,7 +92,11 @@ public class playerController : MonoBehaviour, IDamage
                Input.GetAxis("Horizontal") * transform.right;
         controller.Move(move * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && jumpCount < jumpMax)
+        if (isSwimming && Input.GetButton("Jump"))
+        {
+            playerVel.y = jumpSpeed;
+        }
+        else if (Input.GetButtonDown("Jump") && jumpCount < jumpMax)
         {
             jumpCount++;
             playerVel.y = jumpSpeed;
@@ -347,6 +352,15 @@ public class playerController : MonoBehaviour, IDamage
     public void SetDamage(int amount)
     {
         shootDamage = amount;
+    }
+    public int GetGravity()
+    {
+        return gravity; 
+    }
+    public void SetGravity(int amount)
+    {
+        gravity = amount;
+        jumpSpeed = amount / 2;
     }
 
     public void saveObjectBullet()

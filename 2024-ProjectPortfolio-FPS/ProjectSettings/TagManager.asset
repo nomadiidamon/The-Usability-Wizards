@@ -8,6 +8,7 @@ TagManager:
   - Stationary Enemy
   - Environment
   - Creatable
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -63,7 +63,22 @@ public class Damage : MonoBehaviour
             Instantiate(gameManager.instance.playerScript.GetGunList()[gameManager.instance.playerScript.selectedGun].hitEffect, this.transform.position, Quaternion.identity);
             if (gameManager.instance.playerScript.isCreator)
             {
-                Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z/2), this.transform.rotation);
+                if (other.CompareTag("Ground"))
+                {
+                    //Debug.Log("Points colliding: " + other.GetComponent<Collision>().contacts.Length);
+                    //Debug.Log("Normal on the first point: " + other.GetComponent<Collision>().contacts[0].normal);
+                    //foreach (var item in other.GetComponent<Collision>().contacts)
+                    //{
+                    //    Debug.DrawRay(item.point, item.normal * 100, Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f), 10f);
+                    //}
+                    GameObject thing = gameManager.instance.playerScript.objectHeld;
+
+                    Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2), 
+                        this.transform.rotation * Quaternion.AngleAxis(75, Vector3.right));
+
+                }
+                else
+                { Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2), this.transform.rotation); }
             }
             Destroy(gameObject); 
         }

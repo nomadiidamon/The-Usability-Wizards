@@ -32,7 +32,7 @@ public class gameManager : MonoBehaviour
 
 
     public GameObject player;
-
+    public int worldGravity;
 
 
     public playerController playerScript;
@@ -57,6 +57,7 @@ public class gameManager : MonoBehaviour
         updateRespawnCount(respawns);
         playerScript.updatePlayerUI();
         playerSpawnPosition = GameObject.FindWithTag("Player Spawn Position");
+        worldGravity = instance.playerScript.GetGravity();                          // setting resting gravity of the world
     }
 
     // Update is called once per frame
