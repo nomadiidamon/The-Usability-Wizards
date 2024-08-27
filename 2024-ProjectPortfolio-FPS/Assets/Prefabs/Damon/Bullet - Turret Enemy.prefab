@@ -52,7 +52,7 @@ MonoBehaviour:
   type: 3
   rb: {fileID: 8673488876391018132}
   targetHitEffect: {fileID: 6259388486410025712, guid: d9e8f71040d0db546bd91a35e56784ad, type: 3}
-  damageAmount: 2
+  damageAmount: 3
   damageDelay: 0
   speed: 25
   destroyTime: 3
