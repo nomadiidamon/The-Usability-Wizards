@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5594909959243809031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6718281247922782724}
+  - component: {fileID: 6250127864149054468}
+  m_Layer: 3
+  m_Name: Shield
+  m_TagString: Shield
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6718281247922782724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5594909959243809031}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.22, y: 0.753, z: 1.126}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6083180464367101227}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6250127864149054468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5594909959243809031}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8, y: 2.57, z: 0.43}
+  m_Center: {x: -0.09, y: -0.4, z: 0}
 --- !u!1 &5601992686401530309
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +254,7 @@ GameObject:
   - component: {fileID: 521310214626388824}
   - component: {fileID: 6484093142764482837}
   - component: {fileID: 1646422755764138285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShootPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,6 +424,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4830564121183331150}
+  - {fileID: 6718281247922782724}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &7696987937344138000
@@ -389,6 +443,7 @@ MonoBehaviour:
   ignoreMask:
     serializedVersion: 2
     m_Bits: 8
+  shield: {fileID: 5594909959243809031}
   HP: 10
   speed: 5
   sprintMod: 3
@@ -403,6 +458,7 @@ MonoBehaviour:
   shootDamage: 0
   shootDist: 0
   shootRate: 0
+  deflectionSpeed: 0
   audJump:
   - {fileID: 8300000, guid: 7387f813351958543bd24df759310f4b, type: 3}
   - {fileID: 8300000, guid: 6e1e7ec32c538cf4bbf0f2104e193a9a, type: 3}
@@ -432,6 +488,8 @@ MonoBehaviour:
   selectedGun: 0
   isCreator: 0
   isSwimming: 0
+  isDeflecting: 0
+  isHoldingShield: 0
   objectHeld: {fileID: 0}
 --- !u!143 &3413670455078086860
 CharacterController:
@@ -571,7 +629,7 @@ GameObject:
   - component: {fileID: 6309896326395140827}
   - component: {fileID: 4878058691738478958}
   - component: {fileID: 2869589020594116577}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Muzzle Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,9 +774,9 @@ GameObject:
   - component: {fileID: 4048485641374682720}
   - component: {fileID: 2682768566366869624}
   - component: {fileID: 6084257739461296014}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gun Model
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -800,7 +858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459121249875409650}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlashLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5932842579378363382}
   - component: {fileID: 5089850415019465544}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

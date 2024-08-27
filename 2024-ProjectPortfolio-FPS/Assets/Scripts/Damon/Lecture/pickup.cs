@@ -6,6 +6,8 @@ public class pickup : MonoBehaviour
 {
 
     [SerializeField] gunStats gun;
+    //public BoxCollider myCollider;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,5 +18,6 @@ public class pickup : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 
 }

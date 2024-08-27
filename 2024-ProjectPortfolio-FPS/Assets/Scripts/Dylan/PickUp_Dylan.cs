@@ -76,7 +76,7 @@ public class PickUp_Dylan : MonoBehaviour
                 case pickUpType.health:
                     {
 
-                        if (gameManager.instance.playerScript.GetHealth() < gameManager.instance.playerScript.HPOrig)
+                        if (gameManager.instance.playerScript.GetHealth() < gameManager.instance.playerScript.GetOriginalHpAmount())
                         {
                             gameManager.instance.playerScript.SetHealth(gameManager.instance.playerScript.GetHealth() + 1);
                             gameManager.instance.playerScript.updatePlayerUI();

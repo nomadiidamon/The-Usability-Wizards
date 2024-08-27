@@ -49,6 +49,7 @@ public class Damage : MonoBehaviour
         {
             Instantiate(targetHitEffect, this.transform.position, Quaternion.identity);
             Destroy(gameObject);
+            return;
         }
 
         IDamage damage = other.GetComponent<IDamage>();

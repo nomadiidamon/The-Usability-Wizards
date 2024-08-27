@@ -54,9 +54,9 @@ public class gameManager : MonoBehaviour
 
         instance = this;
         player = GameObject.FindWithTag("Player");
-        playerScript = player.GetComponent<playerController>();
+        playerScript = player.GetComponentInParent<playerController>();
         respawnsOriginal = respawns;
-        updateRespawnCount(respawns);
+        updateRespawnCount(0);
         playerScript.updatePlayerUI();
         playerSpawnPosition = GameObject.FindWithTag("Player Spawn Position");
         worldGravity = instance.playerScript.GetGravity();                          // setting resting gravity of the world

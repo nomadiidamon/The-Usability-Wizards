@@ -9,6 +9,8 @@ TagManager:
   - Environment
   - Creatable
   - Ground
+  - Enemy Bullet
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -25,14 +25,13 @@ public class buttonFunctions : MonoBehaviour
     public void respawn()
     {
         //if (!gameManager.instance.CheckpointReached || gameManager.instance.respawns == 0) { return; }
-        //gameManager.instance.updateRespawnCount(-1);
-        //Debug.Log("Second Chance!");
-        ////SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //gameManager.instance.SetPlayerLocation();
-        //gameManager.instance.playerScript.SetHealth(gameManager.instance.playerScript.HPOrig / 3);
-        //gameManager.instance.playerScript.updatePlayerUI();
-        //gameManager.instance.stateUnpause();
-        //gameManager.instance.respawns--;
+        if (gameManager.instance.respawns == 0)
+        {
+            return;
+        }
+        
+        gameManager.instance.updateRespawnCount(-1);
+        Debug.Log("Second Chance!");
         gameManager.instance.playerScript.spawnPlayer();
         gameManager.instance.stateUnpause();
 

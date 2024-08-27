@@ -16,7 +16,7 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && gameManager.instance.playerSpawnPosition.transform.position != this.transform.position)
+        if (other.CompareTag("Player") && gameManager.instance.playerSpawnPosition.transform.position != this.transform.position && GetComponent<CapsuleCollider>().bounds.Contains(gameManager.instance.player.transform.position))
         {
             gameManager.instance.playerSpawnPosition.transform.position = transform.position;
             StartCoroutine(flashModel());
