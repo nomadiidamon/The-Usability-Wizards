@@ -8,6 +8,8 @@ public class gameManager : MonoBehaviour
 {
     public static gameManager instance;
 
+    [SerializeField] AudioSource audPlayer;
+
     public GameObject menuActive;
     public GameObject menuPause;
     [SerializeField] GameObject menuWin;
@@ -181,6 +183,9 @@ public class gameManager : MonoBehaviour
     }
 
 
-
+    public void PlayAud(AudioClip sound, float vol)
+    {
+        audPlayer.PlayOneShot(sound, vol);
+    }
 
 }

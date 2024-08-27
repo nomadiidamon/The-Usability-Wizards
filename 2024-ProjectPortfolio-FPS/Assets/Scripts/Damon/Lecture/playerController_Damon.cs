@@ -27,7 +27,16 @@ public class playerController : MonoBehaviour, IDamage
     [SerializeField] int shootDamage;
     [SerializeField] int shootDist;
     [SerializeField] float shootRate;
-    
+
+    [Header("-----Sounds-----")]
+    [SerializeField] AudioClip[] audJump;
+    [Range(0, 1)][SerializeField] float audJumpVol;
+    [SerializeField] AudioClip[] audHurt;
+    [Range(0, 1)][SerializeField] float audHurtVol;
+    [SerializeField] AudioClip[] audSteps;
+    [Range(0, 1)][SerializeField] float audStepsVol;
+
+
     Vector3 move;
     Vector3 playerVel;
 
@@ -36,6 +45,7 @@ public class playerController : MonoBehaviour, IDamage
 
     bool isSprinting;
     bool isShooting;
+    bool isPlayingSteps;
 
     public bool sprintToggle;
     bool sprintingPressed;
@@ -100,6 +110,7 @@ public class playerController : MonoBehaviour, IDamage
         {
             jumpCount++;
             playerVel.y = jumpSpeed;
+            gameManager.instance.PlayAud(audJump[Random.Range(0, audJump.Length)], audJumpVol);
         }
 
         if (Input.GetButtonDown("Save Object"))
@@ -121,6 +132,27 @@ public class playerController : MonoBehaviour, IDamage
 
         }
 
+        if (controller.isGrounded && move.magnitude > 0.3f && !isPlayingSteps)
+        {
+            StartCoroutine(playStep());
+        }
+    }
+
+    IEnumerator playStep() 
+    {
+        isPlayingSteps = true;
+
+        gameManager.instance.PlayAud(audSteps[Random.Range(0, audSteps.Length)], audStepsVol);
+        if (!isSprinting)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.3f);
+        }
+
+        isPlayingSteps = false;
 
     }
 
@@ -187,6 +219,9 @@ public class playerController : MonoBehaviour, IDamage
         
         isShooting = true;
         StartCoroutine(flashMuzzle());
+
+        gameManager.instance.PlayAud(gunList[selectedGun].shootSound[Random.Range(0, gunList[selectedGun].shootSound.Length)], gunList[selectedGun].shootVolume);
+
         Instantiate(bullet, shootPos.position, shootPos.rotation);
         //Instantiate(gunList[selectedGun].hitEffect, bullet.transform.position, Quaternion.identity);
 
@@ -226,6 +261,9 @@ public class playerController : MonoBehaviour, IDamage
         HP -= amount;
         //Debug.Log("Ouch!");
         if (HP < 0) { HP = 0; }
+
+        gameManager.instance.PlayAud(audHurt[Random.Range(0, audHurt.Length)], audHurtVol);
+
 
         updatePlayerUI();
         StartCoroutine(flashDamage());
