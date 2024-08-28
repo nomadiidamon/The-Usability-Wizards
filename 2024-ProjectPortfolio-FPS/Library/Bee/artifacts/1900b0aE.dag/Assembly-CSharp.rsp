@@ -378,6 +378,7 @@
 "Assets/Scripts/Damon/Lecture/pickup.cs"
 "Assets/Scripts/Damon/Lecture/playerController.cs"
 "Assets/Scripts/Damon/Lecture/shieldStats.cs"
+"Assets/Scripts/Damon/Working/flashColor.cs"
 "Assets/Scripts/Damon/Working/HealthBarScript_Damon.cs"
 "Assets/Scripts/Damon/Working/MovingPlatform.cs"
 "Assets/Scripts/Damon/Working/scrollUV.cs"

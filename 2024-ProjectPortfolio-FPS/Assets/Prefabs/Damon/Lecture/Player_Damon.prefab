@@ -116,7 +116,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.24528301, g: 0.16776432, b: 0.16776432, a: 1}
+  m_BackGroundColor: {r: 0.24705882, g: 0.0039215684, b: 0.012299863, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -453,6 +453,7 @@ MonoBehaviour:
   gunList: []
   gunModel: {fileID: 7912685596475692159}
   muzzleFlash: {fileID: 6888947675050280122}
+  deflectionFlash: {fileID: 0}
   bullet: {fileID: 7705054103025303262, guid: affa48a4d98f22e4aa6182cf600b73da, type: 3}
   shootPos: {fileID: 3329544287267998570}
   shootDamage: 0
