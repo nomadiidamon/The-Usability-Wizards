@@ -390,6 +390,8 @@ public class playerController : MonoBehaviour, IDamage
         gunModel.GetComponent<MeshFilter>().sharedMesh = gunList[selectedGun].gunModel.GetComponent<MeshFilter>().sharedMesh;
         gunModel.GetComponent<MeshRenderer>().sharedMaterial = gunList[selectedGun].gunModel.GetComponent<MeshRenderer>().sharedMaterial;
 
+        gameManager.instance.PlayAud(gunList[selectedGun].switchSound[Random.Range(0, gunList[selectedGun].switchSound.Length)], gunList[selectedGun].switchVolume);
+
     }
 
     public int GetHealth()
