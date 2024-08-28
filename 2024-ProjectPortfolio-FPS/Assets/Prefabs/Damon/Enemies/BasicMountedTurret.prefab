@@ -218,6 +218,7 @@ MonoBehaviour:
   damage: 1
   bullet: {fileID: 3287213390385466787, guid: e200dac718d66b64baafa9bfb6d7ac52, type: 3}
   shootRate: 2
+  muzzleFlash: {fileID: 4581953193325810353}
 --- !u!136 &5854584583912322938
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ TagManager:
   - Ground
   - Enemy Bullet
   - Shield
+  - Player Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Enemy
   - Enemy Bullet
   - Wall
-  - 
+  - Shield
   - 
   - 
   - 

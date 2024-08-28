@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-
-//using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -25,6 +23,7 @@ public class Damage : MonoBehaviour
     bool isDamageable = true;
     int originalLayer;
     int immune = 9;                // layer 9 is immune
+    bool iHitShield = false;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +53,7 @@ public class Damage : MonoBehaviour
 
         IDamage damage = other.GetComponent<IDamage>();
 
-        if (damage != null )
+        if (damage != null)
         {
             damage.takeDamage(damageAmount);
             StartCoroutine(delayedDamage());
@@ -74,19 +73,33 @@ public class Damage : MonoBehaviour
                     //}
                     GameObject thing = gameManager.instance.playerScript.objectHeld;
 
-                    Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2), 
+                    Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2),
                         this.transform.rotation * Quaternion.AngleAxis(75, Vector3.right));
 
                 }
                 else
                 { Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2), this.transform.rotation); }
             }
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
         if (type == damageType.enemyBullet)
         {
-            Instantiate(targetHitEffect, this.transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            if (other.CompareTag("Shield"))
+            {
+                this.transform.SetParent(gameManager.instance.player.transform);
+                this.transform.rotation = this.transform.rotation * Quaternion.Euler(0.0f, 180f, 0.0f);
+                this.rb.velocity = transform.forward * speed;
+                int delfectDamage = this.GetDamageAmount();
+                this.tag = "Player Bullet";
+                this.gameObject.layer = 3;
+                SetDamageAmount(delfectDamage);
+
+            }
+            else
+            {
+                Instantiate(targetHitEffect, this.transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
 
     }

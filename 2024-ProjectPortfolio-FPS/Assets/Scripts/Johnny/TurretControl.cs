@@ -16,6 +16,8 @@ public class TurretControl : MonoBehaviour, IDamage
     [SerializeField] int damage;
     [SerializeField] GameObject bullet;
     [SerializeField] float shootRate;
+    [SerializeField] GameObject muzzleFlash;
+
 
     bool isShooting;
     bool playerInRange;
@@ -79,6 +81,7 @@ public class TurretControl : MonoBehaviour, IDamage
         {
             if (hit.collider.CompareTag("Player") && angleToPlayer <= viewAngle)
             {
+
                 facePlayer();
                 if (!isShooting)
                 {
@@ -107,12 +110,21 @@ public class TurretControl : MonoBehaviour, IDamage
 
         Vector3 direction = gameManager.instance.player.transform.position - shootPos.transform.position;
         direction.Normalize();
-
+        
         Quaternion bulletRotation = Quaternion.LookRotation(direction);
         Instantiate(bullet, shootPos.transform.position, bulletRotation);
 
+        StartCoroutine(flashMuzzle());
+
         yield return new WaitForSeconds(shootRate);
         isShooting = false;
+    }
+
+    IEnumerator flashMuzzle()
+    {
+        muzzleFlash.SetActive(true);
+        yield return new WaitForSeconds(.05f);
+        muzzleFlash.SetActive(false);
     }
 
     void facePlayer()
@@ -123,6 +135,7 @@ public class TurretControl : MonoBehaviour, IDamage
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger entered by " + other.name + " with tag " + other.tag);
         if (other.CompareTag("Player"))
         {
             playerInRange = true;

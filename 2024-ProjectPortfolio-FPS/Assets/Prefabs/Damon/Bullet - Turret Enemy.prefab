@@ -52,7 +52,7 @@ MonoBehaviour:
   type: 3
   rb: {fileID: 8673488876391018132}
   targetHitEffect: {fileID: 6259388486410025712, guid: d9e8f71040d0db546bd91a35e56784ad, type: 3}
-  damageAmount: 3
+  damageAmount: 1
   damageDelay: 0
   speed: 25
   destroyTime: 3
@@ -66,10 +66,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 640
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -93,7 +93,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 640
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 256

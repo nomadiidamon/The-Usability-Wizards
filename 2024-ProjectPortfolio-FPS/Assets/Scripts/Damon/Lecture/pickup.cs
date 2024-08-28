@@ -11,7 +11,8 @@ public class pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        SphereCollider coll = this.GetComponent<SphereCollider>();
+        if (other.CompareTag("Player") && coll.bounds.Contains(gameManager.instance.player.transform.position))
         {
             // give the palyer the gun
             gameManager.instance.playerScript.getGunStats(gun);

@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunModel: {fileID: 7263974932301356860, guid: 0c761cb6a0742384b989c6654acde62a, type: 3}
   shootDamage: 0
-  shootRate: 1.5
+  shootRate: 0.5
   shootDistance: 20
   ammoCur: 0
   ammoMax: 3
   hitEffect: {fileID: 3249809072487309720, guid: 47096eff328e11a418ace7db2d72aa97, type: 3}
   shootSound:
-  - {fileID: 8300000, guid: 51e8d9e3c7c8c7043bb7dbc6ce702dbd, type: 3}
-  shootVolume: 0.5
+  - {fileID: 8300000, guid: 2579b45e1c309f04f9a5bf7ea52aafff, type: 3}
+  - {fileID: 8300000, guid: 1c429f653070490489dedbc2f140ee9f, type: 3}
+  - {fileID: 8300000, guid: 9bace5c4de863c846b99cf8f62c163be, type: 3}
+  - {fileID: 8300000, guid: b4b12a473d599ac48b4b9ed0cfcc2095, type: 3}
+  shootVolume: 0.2
   isCreator: 0
   isShield: 1

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4360077409253042313}
   - component: {fileID: 554411243030301449}
   - component: {fileID: 5451134183686783388}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet - Soldier Enemy
   m_TagString: Enemy Bullet
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd65ec4b9ad47349b1b757980895315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 3
   rb: {fileID: 4360077409253042313}
   targetHitEffect: {fileID: 3249809072487309720, guid: 47096eff328e11a418ace7db2d72aa97, type: 3}
   damageAmount: 1

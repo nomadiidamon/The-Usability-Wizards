@@ -24,6 +24,7 @@ public class playerController : MonoBehaviour, IDamage
     [SerializeField] List<gunStats> gunList = new List<gunStats>();
     [SerializeField] GameObject gunModel;
     [SerializeField] GameObject muzzleFlash;
+    [SerializeField] GameObject deflectionFlash;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform shootPos;
     [SerializeField] int shootDamage;
@@ -227,29 +228,18 @@ public class playerController : MonoBehaviour, IDamage
         }
         else
         {
-            Debug.Log("I'm trying to block!!");
             isDeflecting = true;
             isShooting = true;
-
-            //shieldStats thing = (shieldStats)gunList[selectedGun];
-            
+           
             StartCoroutine(Deflecting(myCollider));
-
-            Collider[] hitColliders = Physics.OverlapBox(myCollider.bounds.center, myCollider.bounds.extents, Quaternion.identity);
-
-            foreach (Collider collider in hitColliders)
+            StartCoroutine(flashDeflection());
+            bool isPlayingDeflection = true;
+            gameManager.instance.PlayAud(gunList[selectedGun].shootSound[Random.Range(0, gunList[selectedGun].shootSound.Length)], gunList[selectedGun].shootVolume);
+            if (isPlayingDeflection)
             {
-                if (collider.gameObject.CompareTag("Enemy Bullet"))
-                {
-                    int damage = collider.gameObject.GetComponent<Damage>().GetDamageAmount();
-                    gunList[selectedGun].shootDamage = damage;
-                    StartCoroutine(flashDeflection());
-                    Debug.Log("I did it!");
-                    gameManager.instance.PlayAud(gunList[selectedGun].shootSound[Random.Range(0, gunList[selectedGun].shootSound.Length)], gunList[selectedGun].shootVolume);
-                    collider.gameObject.GetComponent<Rigidbody>().velocity = collider.gameObject.transform.forward * deflectionSpeed;
-                    yield return new WaitForSeconds(shootRate);
-                }
-            }
+                yield return new WaitForSeconds(0.5f);
+                isPlayingDeflection = false;
+            }        
             isShooting = false;
             isDeflecting = false;
             yield return new WaitForSeconds(0);
@@ -259,11 +249,11 @@ public class playerController : MonoBehaviour, IDamage
     IEnumerator Deflecting(BoxCollider coll)
     {
         coll.enabled = true;
-        Debug.Log("Collider is active!");
+        //Debug.Log("Collider is active!");
 
         yield return new WaitForSeconds(shootRate);
         coll.enabled = false;
-        Debug.Log("Collider is off!");
+        //Debug.Log("Collider is off!");
 
     }
 
@@ -276,12 +266,10 @@ public class playerController : MonoBehaviour, IDamage
 
     IEnumerator flashDeflection()
     {
-        Color colorOriginal = muzzleFlash.GetComponent<Renderer>().material.color;
-        muzzleFlash.GetComponent<Renderer>().material.color = Color.blue;
-        muzzleFlash.SetActive(true);
+        
+        deflectionFlash.SetActive(true);
         yield return new WaitForSeconds(.05f);
-        muzzleFlash.GetComponent<Renderer>().material.color = colorOriginal;
-        muzzleFlash.SetActive(false);
+        deflectionFlash.SetActive(false);
     }
 
     public void takeDamage(int amount)

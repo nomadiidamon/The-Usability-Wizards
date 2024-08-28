@@ -69,7 +69,8 @@ public class PickUp_Dylan : MonoBehaviour
         {
             return;
         }
-        if (other.CompareTag("Player"))
+        SphereCollider coll = this.GetComponent<SphereCollider>();
+        if (other.CompareTag("Player") && coll.bounds.Contains(gameManager.instance.player.transform.position))
         {
             switch (type)
             {
