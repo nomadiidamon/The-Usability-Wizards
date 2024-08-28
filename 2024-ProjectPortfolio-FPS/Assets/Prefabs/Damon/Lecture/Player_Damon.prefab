@@ -105,7 +105,7 @@ MonoBehaviour:
   sens: 300
   lockVertMin: -90
   lockVertMax: 90
-  invertY: 1
+  invertY: 0
 --- !u!20 &3836085253639056780
 Camera:
   m_ObjectHideFlags: 0
@@ -453,6 +453,7 @@ MonoBehaviour:
   gunList: []
   gunModel: {fileID: 7912685596475692159}
   muzzleFlash: {fileID: 6888947675050280122}
+  deflectionFlash: {fileID: 0}
   bullet: {fileID: 7705054103025303262, guid: affa48a4d98f22e4aa6182cf600b73da, type: 3}
   shootPos: {fileID: 3329544287267998570}
   shootDamage: 0
@@ -483,6 +484,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bcc89b972c0d92d4695426346381346d, type: 3}
   - {fileID: 8300000, guid: ce0af7f393f223547b2ccb72cfbadb8e, type: 3}
   audStepsVol: 0.2
+  audWeapPickup: {fileID: 8300000, guid: cf58eab19a3fc784facdb4bd23251b0e, type: 3}
+  audWeapPickupVol: 1
   HPOrig: 0
   sprintToggle: 1
   selectedGun: 0

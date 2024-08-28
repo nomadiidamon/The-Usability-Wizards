@@ -321,10 +321,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3807142087558244944, guid: 89c27f129871ce846af830d1864f4b65, type: 3}
-      propertyPath: invertY
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6083180464367101227, guid: 89c27f129871ce846af830d1864f4b65, type: 3}
       propertyPath: m_LocalPosition.x
       value: 86.23
@@ -3352,32 +3348,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a814baa0a9f2e4b904ebb77adb5860, type: 3}
---- !u!1 &419522967 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8273380974367270001, guid: 3597cb46756e10f42a9169ba68caf1a3, type: 3}
-  m_PrefabInstance: {fileID: 840004873}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &419522972
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419522967}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ffe03419b0bb4fa4b84921f1ee9d49b2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &433417429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,18 +3471,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1_Damon (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 991210694362122776, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 879420323}
-    - target: {fileID: 991210694362122776, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-      propertyPath: roamTimer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 991210694362122776, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-      propertyPath: roamDistance
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 8837204978625838430, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.33
@@ -3552,10 +3510,6 @@ PrefabInstance:
     - target: {fileID: 8837204978625838430, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9214022508307568969, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-      propertyPath: m_Radius
-      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3599,10 +3553,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1_Damon (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 991210694362122776, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 2023992454}
     - target: {fileID: 8837204978625838430, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.5850906
@@ -5912,10 +5862,6 @@ PrefabInstance:
       value: Floor_Damon
       objectReference: {fileID: 0}
     - target: {fileID: 8831094573056774844, guid: 3597cb46756e10f42a9169ba68caf1a3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 7.0027046
-      objectReference: {fileID: 0}
-    - target: {fileID: 8831094573056774844, guid: 3597cb46756e10f42a9169ba68caf1a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65
       objectReference: {fileID: 0}
@@ -5958,10 +5904,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8273380974367270001, guid: 3597cb46756e10f42a9169ba68caf1a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 419522972}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3597cb46756e10f42a9169ba68caf1a3, type: 3}
 --- !u!1001 &849956590
 PrefabInstance:
@@ -6268,10 +6211,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1_Damon (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 991210694362122776, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 873516965}
     - target: {fileID: 8837204978625838430, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.5850906
@@ -6322,20 +6261,10 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8837204978625838430, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
   m_PrefabInstance: {fileID: 873516961}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &873516965 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2176174365748436954, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-  m_PrefabInstance: {fileID: 873516961}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &875227834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8373452920256158562, guid: 6db95af21626f4b47b9f2538a5b90982, type: 3}
   m_PrefabInstance: {fileID: 1576477823}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &879420323 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2176174365748436954, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-  m_PrefabInstance: {fileID: 469696151}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &897308020
 PrefabInstance:
@@ -7873,10 +7802,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1_Damon (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 991210694362122776, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1082553487}
     - target: {fileID: 8837204978625838430, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.33509
@@ -7925,11 +7850,6 @@ PrefabInstance:
 --- !u!4 &1082553484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8837204978625838430, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-  m_PrefabInstance: {fileID: 1082553483}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1082553487 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2176174365748436954, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
   m_PrefabInstance: {fileID: 1082553483}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1084910970 stripped
@@ -9221,10 +9141,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1691196075584065032, guid: aaa06c74bb86c6f43a0096a1e19d47c8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1691196075584065032, guid: aaa06c74bb86c6f43a0096a1e19d47c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 85.91346
@@ -14062,11 +13978,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 142283655015259720, guid: 72e148bb4ca99274ab64ced804821a63, type: 3}
   m_PrefabInstance: {fileID: 1614925164}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2023992454 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2176174365748436954, guid: 36a9d438805eaea4ab68a8c87bda3544, type: 3}
-  m_PrefabInstance: {fileID: 506945879}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2026810937
 PrefabInstance:

@@ -39,6 +39,8 @@ public class playerController : MonoBehaviour, IDamage
     [Range(0, 1)][SerializeField] float audHurtVol;
     [SerializeField] AudioClip[] audSteps;
     [Range(0, 1)][SerializeField] float audStepsVol;
+    [SerializeField] AudioClip audWeapPickup;
+    [Range(0, 1)][SerializeField] float audWeapPickupVol;
 
 
     Vector3 move;
@@ -348,6 +350,7 @@ public class playerController : MonoBehaviour, IDamage
 
     public void getGunStats(gunStats gun)
     {
+        gameManager.instance.PlayAud(audWeapPickup, audWeapPickupVol);
         gunList.Add(gun);
         selectedGun = gunList.Count - 1;
         shootDamage = gun.shootDamage;
