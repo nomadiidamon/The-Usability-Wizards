@@ -105,7 +105,7 @@ MonoBehaviour:
   sens: 300
   lockVertMin: -90
   lockVertMax: 90
-  invertY: 0
+  invertY: 1
 --- !u!20 &3836085253639056780
 Camera:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_Bits: 8
   shield: {fileID: 5594909959243809031}
   HP: 10
-  speed: 5
+  speed: 3
   sprintMod: 3
   jumpMax: 2
   jumpSpeed: 12

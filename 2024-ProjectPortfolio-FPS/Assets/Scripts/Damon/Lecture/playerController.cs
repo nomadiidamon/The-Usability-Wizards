@@ -72,6 +72,7 @@ public class playerController : MonoBehaviour, IDamage
         updatePlayerUI();
         spawnPlayer();
         myCollider = shield.GetComponent<BoxCollider>();
+        myCollider.enabled = false;
     }
 
     public void spawnPlayer()
