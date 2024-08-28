@@ -354,6 +354,7 @@ public class playerController : MonoBehaviour, IDamage
         gunList.Add(gun);
         selectedGun = gunList.Count - 1;
         shootDamage = gun.shootDamage;
+        bullet.GetComponent<Damage>().SetDamageAmount(shootDamage);
         shootDist = gun.shootDistance;
         shootRate = gun.shootRate;
         isCreator = gun.isCreator;
