@@ -15,10 +15,10 @@ public class gameManager : MonoBehaviour
     [SerializeField] GameObject menuWin;
     [SerializeField] GameObject menuLose;
     public GameObject menuSettings;
-    
+
 
     public GameObject playerSpawnPosition;
-    
+
     public GameObject flashDamageScreen;
     public GameObject underwaterOverlay;
     public GameObject restoreHealthScreen;
@@ -41,7 +41,7 @@ public class gameManager : MonoBehaviour
     public playerController playerScript;
     public int respawns;
     int respawnsOriginal;
-    public int GetOriginalRespawnCount() {  return respawnsOriginal; }
+    public int GetOriginalRespawnCount() { return respawnsOriginal; }
 
     public bool isPaused;
 
@@ -104,8 +104,8 @@ public class gameManager : MonoBehaviour
 
     public void stateUnpause()
     {
-       
-        
+
+
         Debug.Log("Unpaused");
         isPaused = !isPaused;
         Time.timeScale = 1;
@@ -113,7 +113,7 @@ public class gameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         menuActive.SetActive(isPaused);
         menuActive = null;
-        
+
 
     }
 
@@ -164,9 +164,9 @@ public class gameManager : MonoBehaviour
         uiPrompt.enabled = !string.IsNullOrEmpty(message);
     }
 
-    public void ClearUIPrompt(GameObject door) 
+    public void ClearUIPrompt(GameObject door)
     {
-    
+
         if (currentDoor == door)
         {
 
@@ -175,7 +175,7 @@ public class gameManager : MonoBehaviour
 
         }
 
-    
+
     }
 
     public bool IsUIPromptActive()

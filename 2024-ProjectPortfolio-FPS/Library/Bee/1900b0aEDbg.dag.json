@@ -28319,7 +28319,11 @@
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
       "PayloadOffset": 2123284,
+<<<<<<< Updated upstream
       "PayloadLength": 34840,
+=======
+      "PayloadLength": 34846,
+>>>>>>> Stashed changes
       "PayloadDebugContentSnippet": "-target:library\n-out:\"Library/",
       "Inputs": [],
       "Outputs": [
@@ -28331,7 +28335,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
+<<<<<<< Updated upstream
       "PayloadOffset": 2158214,
+=======
+      "PayloadOffset": 2158220,
+>>>>>>> Stashed changes
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -28609,7 +28617,11 @@
         "Assets/Scripts/Damon/Working/StationaryEnemy.cs",
         "Assets/Scripts/Dylan/meleeAI_Dylan.cs",
         "Assets/Scripts/Dylan/PickUp_Dylan.cs",
+<<<<<<< Updated upstream
         "Assets/Scripts/Dylan/Water.cs",
+=======
+        "Assets/Scripts/Dylan/Water_Dylan.cs",
+>>>>>>> Stashed changes
         "Assets/Scripts/Hiry/doorFunction.cs",
         "Assets/Scripts/Hiry/settings.cs",
         "Assets/Scripts/Johnny/Lava.cs",
@@ -28916,7 +28928,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
+<<<<<<< Updated upstream
       "PayloadOffset": 2158313,
+=======
+      "PayloadOffset": 2158319,
+>>>>>>> Stashed changes
       "PayloadLength": 10501,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],

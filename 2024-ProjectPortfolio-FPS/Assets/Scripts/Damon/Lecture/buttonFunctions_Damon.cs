@@ -32,6 +32,10 @@ public class buttonFunctions : MonoBehaviour
             return;
         }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         gameManager.instance.updateRespawnCount(-1);
         Debug.Log("Second Chance!");
         gameManager.instance.playerScript.spawnPlayer();
@@ -45,25 +49,25 @@ public class buttonFunctions : MonoBehaviour
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-    #else
+#else
         Application.Quit();
-    #endif
+#endif
     }
 
     public void openSettings()
     {
 
-        
-        
 
-            gameManager.instance.menuPause.SetActive(false);
 
-            gameManager.instance.menuActive = gameManager.instance.menuSettings;
-            gameManager.instance.menuSettings.SetActive(true);
-        
-        
-            
-        
+
+        gameManager.instance.menuPause.SetActive(false);
+
+        gameManager.instance.menuActive = gameManager.instance.menuSettings;
+        gameManager.instance.menuSettings.SetActive(true);
+
+
+
+
     }
 
     public void closeSettings()

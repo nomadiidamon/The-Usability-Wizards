@@ -89,7 +89,23 @@ public class Lava : MonoBehaviour
         {
             if (damageable is Component component && component.gameObject != null && component.gameObject.activeInHierarchy)
             {
+<<<<<<< Updated upstream
                 damageable.takeDamage(lavaDamageAmount);
+=======
+                // Check if the damageable is still a valid object
+                if (damageable is enemyAI enemy && enemy != null && enemy.gameObject != null && enemy.gameObject.activeInHierarchy)
+                {
+                    damageable.takeDamage(lavaDamageAmount);
+                }
+                else if (damageable is IDamage player && player != null)
+                {
+                    damageable.takeDamage(lavaDamageAmount);
+                }
+                else
+                {
+                    yield break;
+                }
+>>>>>>> Stashed changes
                 yield return new WaitForSeconds(damageInterval);
             }
             else

@@ -71,18 +71,18 @@ public class Damage : MonoBehaviour
                     //GameObject thing2 = Instantiate(thing, new Vector3(this.transform.position.x, thing.transform.localScale.y * 1.5f, this.transform.position.z),
                     //    Quaternion.Euler(0, 0, this.transform.rotation.z));
                     //thing2.transform.LookAt(gameManager.instance.player.transform);
-                    
+
                     GameObject newGroundObject = Instantiate(groundObject, new Vector3(this.transform.position.x, halfHeight, this.transform.position.z),
                         Quaternion.Euler(0, 0, this.transform.rotation.z));
                     newGroundObject.transform.LookAt(gameManager.instance.player.transform);
 
                 }
                 else
-                { 
+                {
                     GameObject wallObject = gameManager.instance.playerScript.objectHeld;
 
-                   GameObject newWallObject = Instantiate(gameManager.instance.playerScript.objectHeld,
-                       this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2), this.transform.rotation);
+                    GameObject newWallObject = Instantiate(gameManager.instance.playerScript.objectHeld,
+                        this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2), this.transform.rotation);
                     newWallObject.transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
                 }
             }

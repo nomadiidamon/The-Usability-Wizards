@@ -117,7 +117,11 @@ GameObject:
   - component: {fileID: 1086421719842592401}
   - component: {fileID: 2204551197904244698}
   - component: {fileID: 8271345393492189209}
+<<<<<<< Updated upstream
   - component: {fileID: 2989081059917139291}
+=======
+  - component: {fileID: 4285737628584128886}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Temp Melee Enemy 1
   m_TagString: Untagged
@@ -280,7 +284,11 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 25
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!65 &2989081059917139291
+=======
+--- !u!65 &4285737628584128886
+>>>>>>> Stashed changes
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,8 +307,13 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
+<<<<<<< Updated upstream
   m_Size: {x: 1, y: 0.2, z: 1}
   m_Center: {x: 0, y: -0.9, z: 0}
+=======
+  m_Size: {x: 1, y: 0.25, z: 1}
+  m_Center: {x: 0, y: -0.8, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &2552491777754191521
 GameObject:
   m_ObjectHideFlags: 0

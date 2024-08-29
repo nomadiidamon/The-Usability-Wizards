@@ -251,6 +251,10 @@ public class enemyAI : MonoBehaviour, IDamage
     {
         audEnemy.PlayOneShot(sound, vol);
     }
+<<<<<<< Updated upstream
 
 }
+=======
+>>>>>>> Stashed changes
 
+}

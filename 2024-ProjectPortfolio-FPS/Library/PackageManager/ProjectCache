@@ -5,7 +5,11 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< Updated upstream
       ticks: 638604988586387161
+=======
+      ticks: 638605094733952356
+>>>>>>> Stashed changes
     m_Hash: 4071393468
   m_LockFileStatus:
     m_FilePath: E:/Project and Portfolio/The-Usability-Wizards/2024-ProjectPortfolio-FPS/Packages/packages-lock.json
@@ -13,7 +17,11 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< Updated upstream
       ticks: 638604988586397157
+=======
+      ticks: 638605094733952356
+>>>>>>> Stashed changes
     m_Hash: 2526273715
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

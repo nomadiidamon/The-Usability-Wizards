@@ -38,6 +38,7 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
         colorOrig = model.material.color;
         gameManager.instance.updateGameGoal(1);
 
+<<<<<<< Updated upstream
 
         lavaCollider = GetComponent<BoxCollider>();
 
@@ -50,6 +51,10 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
             Debug.LogError("No BoxCollider found on this GameObject!");
         }
 
+=======
+        lavaCollider = GetComponent<BoxCollider>();
+
+>>>>>>> Stashed changes
         updateHPBar();
     }
 
