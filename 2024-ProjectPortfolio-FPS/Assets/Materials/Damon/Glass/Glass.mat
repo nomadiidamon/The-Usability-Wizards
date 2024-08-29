@@ -12,7 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
+  - _ALPHABLEND_ON
   - _EMISSION
   - _METALLICGLOSSMAP
   - _NORMALMAP
@@ -76,15 +76,15 @@ Material:
     - _Glossiness: 1
     - _GlossyReflections: 1
     - _Metallic: 0.733
-    - _Mode: 3
+    - _Mode: 2
     - _OcclusionStrength: 0.307
     - _Parallax: 0.0148
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
-    - _EmissionColor: {r: 0.3717795, g: 0.3717795, b: 0.3717795, a: 1}
+    - _Color: {r: 0.8301887, g: 0.82600725, b: 0.11356357, a: 0.05490196}
+    - _EmissionColor: {r: 0.735849, g: 0.6776085, b: 0.09371662, a: 1}
   m_BuildTextureStacks: []
