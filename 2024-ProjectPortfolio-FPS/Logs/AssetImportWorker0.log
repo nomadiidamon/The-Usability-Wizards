@@ -1,23 +1,29 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.40f1 (cbdda657d2f0) revision 13360550'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 16085 MB
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16197 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2022.3.40f1\Editor\Unity.exe
+D:\Unity\2022.3.40f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Portfolio2/The-Usability-Wizards/2024-ProjectPortfolio-FPS
+D:/Unity/The-Usability-Wizards/2024-ProjectPortfolio-FPS
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 61142
 Successfully changed project path to: C:/Portfolio2/The-Usability-Wizards/2024-ProjectPortfolio-FPS
 C:/Portfolio2/The-Usability-Wizards/2024-ProjectPortfolio-FPS
+=======
+59270
+Successfully changed project path to: D:/Unity/The-Usability-Wizards/2024-ProjectPortfolio-FPS
+D:/Unity/The-Usability-Wizards/2024-ProjectPortfolio-FPS
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,6 +55,7 @@ C:/Portfolio2/The-Usability-Wizards/2024-ProjectPortfolio-FPS
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< HEAD
 Player connection [24760]  Target information:
 
 Player connection [24760]  * "[IP] 10.0.0.40 [Port] 0 [Flags] 2 [Guid] 861110597 [EditorId] 861110597 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
@@ -57,18 +64,29 @@ Player connection [24760] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [24760] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 24 workers.
 Refreshing native plugins compatible for Editor in 7.82 ms, found 3 plugins.
+=======
+Player connection [11516]  Target information:
+
+Player connection [11516]  * "[IP] 192.168.68.63 [Port] 0 [Flags] 2 [Guid] 1369148101 [EditorId] 1369148101 [Version] 1048832 [Id] WindowsEditor(7,Nomadochi) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [11516] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [11516] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+Refreshing native plugins compatible for Editor in 6.02 ms, found 3 plugins.
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.40f1 (cbdda657d2f0)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.40f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Portfolio2/The-Usability-Wizards/2024-ProjectPortfolio-FPS/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/2022.3.40f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/The-Usability-Wizards/2024-ProjectPortfolio-FPS/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 4070 Laptop GPU (ID=0x2820)
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2216)
     Vendor:   NVIDIA
-    VRAM:     7948 MB
-    Driver:   31.0.15.5188
+    VRAM:     10053 MB
+    Driver:   32.0.15.5612
 Initialize mono
+<<<<<<< HEAD
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.40f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.40f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.40f1/Editor/Data/MonoBleedingEdge/etc'
@@ -78,16 +96,36 @@ Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.40f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Registered in 0.004189 seconds.
 - Loaded All Assemblies, in  0.248 seconds
+=======
+Mono path[0] = 'D:/Unity/2022.3.40f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2022.3.40f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/2022.3.40f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56452
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2022.3.40f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/Unity/2022.3.40f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003058 seconds.
+- Loaded All Assemblies, in  0.370 seconds
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.183 seconds
 Domain Reload Profiling: 431ms
 	BeginReloadAssembly (80ms)
+=======
+- Finished resetting the current domain, in  0.181 seconds
+Domain Reload Profiling: 551ms
+	BeginReloadAssembly (144ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< HEAD
 	RebuildCommonClasses (23ms)
 	RebuildNativeTypeToScriptingClass (7ms)
 	initialDomainReloadingComplete (40ms)
@@ -109,6 +147,29 @@ Domain Reload Profiling: 431ms
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (1ms)
 			ProcessInitializeOnLoadAttributes (106ms)
+=======
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (146ms)
+		LoadAssemblies (145ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (143ms)
+			TypeCache.Refresh (142ms)
+				TypeCache.ScanAssembly (127ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (181ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (150ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (105ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 			ProcessInitializeOnLoadMethodAttributes (33ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -118,8 +179,13 @@ Domain Reload Profiling: 431ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 - Loaded All Assemblies, in  0.447 seconds
+=======
+- Loaded All Assemblies, in  0.859 seconds
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
   at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
   at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
@@ -142,14 +208,21 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.673 seconds
 Domain Reload Profiling: 1118ms
 	BeginReloadAssembly (108ms)
+=======
+- Finished resetting the current domain, in  0.853 seconds
+Domain Reload Profiling: 1713ms
+	BeginReloadAssembly (131ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (16ms)
+<<<<<<< HEAD
 	RebuildCommonClasses (22ms)
 	RebuildNativeTypeToScriptingClass (7ms)
 	initialDomainReloadingComplete (31ms)
@@ -165,10 +238,583 @@ Domain Reload Profiling: 1118ms
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
 		SetupLoadedEditorAssemblies (581ms)
+=======
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (672ms)
+		LoadAssemblies (320ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (433ms)
+			TypeCache.Refresh (365ms)
+				TypeCache.ScanAssembly (335ms)
+			ScanForSourceGeneratedMonoScriptInfo (56ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (853ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (753ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (36ms)
+			ProcessInitializeOnLoadAttributes (694ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3677 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (1.8 MB). Loaded Objects now: 4133.
+Memory consumption went from 154.9 MB to 153.0 MB.
+Total: 13.489200 ms (FindLiveObjects: 0.325500 ms CreateObjectMapping: 0.209000 ms MarkObjects: 12.377700 ms  DeleteObjects: 0.574700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 116071.368193 seconds.
+  path: Assets/Scenes/Final Prototype Scenes
+  artifactKey: Guid(8d93e680fa3cfc14ba49431bfad477d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Final Prototype Scenes using Guid(8d93e680fa3cfc14ba49431bfad477d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '4b6dd78eb830a16326675feda0104b2c') in 0.003110 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Scenes/Final Prototype Scenes/LinearPath.unity
+  artifactKey: Guid(fab9c7f3f895d0c478fbc750213e5127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Final Prototype Scenes/LinearPath.unity using Guid(fab9c7f3f895d0c478fbc750213e5127) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '228910ab89fa565e5f021c91a88e1e51') in 0.000498 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 17.926883 seconds.
+  path: Assets/Prefabs/Prototype 1 - Prefabs
+  artifactKey: Guid(e2aecb90853324642b8949292144bfa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Prototype 1 - Prefabs using Guid(e2aecb90853324642b8949292144bfa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'a46861960c104920d9748ba2d0cca871') in 0.000365 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 23.185867 seconds.
+  path: Assets/Prefabs/Damon/Working
+  artifactKey: Guid(e4d59150c6227764f976a36a4efc91ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Damon/Working using Guid(e4d59150c6227764f976a36a4efc91ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '40aa9e22b380e15941c3b7fc5490743d') in 0.000929 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.723437 seconds.
+  path: Assets/Materials/Damon
+  artifactKey: Guid(c9511c307e93f954daf92538a164057c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Damon using Guid(c9511c307e93f954daf92538a164057c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '83339e5a9518c30bac971eddf53f1635') in 0.000352 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.480599 seconds.
+  path: Assets/Materials/Damon/Glass
+  artifactKey: Guid(df263b697c0da5c41928a662e20d969d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Damon/Glass using Guid(df263b697c0da5c41928a662e20d969d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '5d4b73df585bba802b23ac9f1c5d1d2f') in 0.000324 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 45.453129 seconds.
+  path: Assets/Scripts/Damon
+  artifactKey: Guid(daead050863d7d94e80d5537f2b49dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Damon using Guid(daead050863d7d94e80d5537f2b49dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '1dfe2bcbe0223866ae8ef86a905959ad') in 0.000426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.850754 seconds.
+  path: Assets/Scripts/Damon/Working
+  artifactKey: Guid(560801cb5b51e654c8db706bbd95752a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Damon/Working using Guid(560801cb5b51e654c8db706bbd95752a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'a839b57c16ed0eca75ff8af271870d60') in 0.000381 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 327.065356 seconds.
+  path: Assets/Scripts/Damon/Working/flashColor.cs
+  artifactKey: Guid(999151a6b04c64f4fb3a069d19e080a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Damon/Working/flashColor.cs using Guid(999151a6b04c64f4fb3a069d19e080a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'abce626a5186f49dded2da3f42561c49') in 0.000643 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 141.230590 seconds.
+  path: Assets/Scripts/Damon/Working/scrollUV.cs
+  artifactKey: Guid(c0e6eff96ef45ea4b86c1ab4b0738c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Damon/Working/scrollUV.cs using Guid(c0e6eff96ef45ea4b86c1ab4b0738c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '6b6c1696849d43342daf6a9ade2b1809') in 0.000411 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.337 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.111 seconds
+Domain Reload Profiling: 1448ms
+	BeginReloadAssembly (144ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (148ms)
+		LoadAssemblies (206ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (10ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1111ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (597ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (47ms)
+			ProcessInitializeOnLoadAttributes (526ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3610 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4137.
+Memory consumption went from 139.5 MB to 137.6 MB.
+Total: 8.183500 ms (FindLiveObjects: 0.218300 ms CreateObjectMapping: 0.115800 ms MarkObjects: 7.605300 ms  DeleteObjects: 0.242900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 65.473999 seconds.
+  path: Assets/Prefabs/Damon/Lecture
+  artifactKey: Guid(bf071d6d2e427354b810ca3baab47298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Damon/Lecture using Guid(bf071d6d2e427354b810ca3baab47298) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'af40d80589ec33cde0c6d814c441f0af') in 0.003478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 24.522633 seconds.
+  path: Assets/Prefabs/Damon/Working/Directional Arrow.prefab
+  artifactKey: Guid(8d5e7a10446d8974a804cf97cd58eafc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Damon/Working/Directional Arrow.prefab using Guid(8d5e7a10446d8974a804cf97cd58eafc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '0a4c57f1a891494182da5bf859479764') in 0.000441 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 59.190965 seconds.
+  path: Assets/Prefabs/Damon/Working/Light Checkpoint.prefab
+  artifactKey: Guid(45e617218bd1f1c4db9fe505101556f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Damon/Working/Light Checkpoint.prefab using Guid(45e617218bd1f1c4db9fe505101556f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '2cd76570326b289e8b1d411f8e242e8e') in 0.000572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 125.318273 seconds.
+  path: Assets/Prefabs/Damon/Working/Light Strip - Long.prefab
+  artifactKey: Guid(aaa06c74bb86c6f43a0096a1e19d47c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Damon/Working/Light Strip - Long.prefab using Guid(aaa06c74bb86c6f43a0096a1e19d47c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '83a6ac51c336c168865fcc41e9b47ac8') in 0.000482 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.331 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.076 seconds
+Domain Reload Profiling: 1407ms
+	BeginReloadAssembly (136ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (18ms)
+	LoadAllAssembliesAndSetupDomain (148ms)
+		LoadAssemblies (206ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1077ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (581ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (43ms)
+			ProcessInitializeOnLoadAttributes (514ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3610 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4141.
+Memory consumption went from 139.5 MB to 137.7 MB.
+Total: 9.085500 ms (FindLiveObjects: 0.291200 ms CreateObjectMapping: 0.181400 ms MarkObjects: 8.166400 ms  DeleteObjects: 0.445300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 473.138387 seconds.
+  path: Assets/Prefabs/Damon/Lecture/Weapons
+  artifactKey: Guid(12db16b33fb936b4e8a9a992757025dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Damon/Lecture/Weapons using Guid(12db16b33fb936b4e8a9a992757025dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'b6cc3c69dd48e16de22e0b32ea69d585') in 0.003800 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.329 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.116 seconds
+Domain Reload Profiling: 1444ms
+	BeginReloadAssembly (138ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (146ms)
+		LoadAssemblies (206ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (10ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1116ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (596ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (44ms)
+			ProcessInitializeOnLoadAttributes (526ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3610 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4145.
+Memory consumption went from 139.5 MB to 137.7 MB.
+Total: 7.569000 ms (FindLiveObjects: 0.173600 ms CreateObjectMapping: 0.076400 ms MarkObjects: 7.078300 ms  DeleteObjects: 0.239600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.319 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.062 seconds
+Domain Reload Profiling: 1381ms
+	BeginReloadAssembly (135ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (139ms)
+		LoadAssemblies (197ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (9ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1062ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (574ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (4ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (42ms)
+			ProcessInitializeOnLoadAttributes (502ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4149.
+Memory consumption went from 139.7 MB to 137.9 MB.
+Total: 8.562500 ms (FindLiveObjects: 0.229500 ms CreateObjectMapping: 0.100500 ms MarkObjects: 7.868400 ms  DeleteObjects: 0.362800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.317 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.040 seconds
+Domain Reload Profiling: 1357ms
+	BeginReloadAssembly (139ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (133ms)
+		LoadAssemblies (190ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (10ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1041ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (559ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+<<<<<<< HEAD
 			BeforeProcessingInitializeOnLoad (45ms)
 			ProcessInitializeOnLoadAttributes (510ms)
 			ProcessInitializeOnLoadMethodAttributes (14ms)
@@ -597,6 +1243,21 @@ Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4158.
 Memory consumption went from 141.1 MB to 139.3 MB.
 Total: 7.536600 ms (FindLiveObjects: 0.174900 ms CreateObjectMapping: 0.083000 ms MarkObjects: 6.989500 ms  DeleteObjects: 0.288400 ms)
+=======
+			BeforeProcessingInitializeOnLoad (48ms)
+			ProcessInitializeOnLoadAttributes (487ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4153.
+Memory consumption went from 139.7 MB to 137.9 MB.
+Total: 8.186000 ms (FindLiveObjects: 0.186400 ms CreateObjectMapping: 0.084900 ms MarkObjects: 7.646800 ms  DeleteObjects: 0.266800 ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -617,8 +1278,13 @@ AssetImportParameters requested are different than current active one (requested
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 - Loaded All Assemblies, in  0.313 seconds
+=======
+- Loaded All Assemblies, in  0.333 seconds
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
   at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
   at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
@@ -640,33 +1306,56 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.983 seconds
 Domain Reload Profiling: 1295ms
 	BeginReloadAssembly (123ms)
+=======
+- Finished resetting the current domain, in  1.048 seconds
+Domain Reload Profiling: 1381ms
+	BeginReloadAssembly (142ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 		CreateAndSetChildDomain (29ms)
 	RebuildCommonClasses (21ms)
 	RebuildNativeTypeToScriptingClass (7ms)
 	initialDomainReloadingComplete (19ms)
 	LoadAllAssembliesAndSetupDomain (142ms)
 		LoadAssemblies (188ms)
+=======
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (146ms)
+		LoadAssemblies (204ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (10ms)
 			TypeCache.Refresh (5ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (4ms)
+<<<<<<< HEAD
 	FinalizeReload (984ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
 		SetupLoadedEditorAssemblies (470ms)
+=======
+	FinalizeReload (1049ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (567ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
+			InitializePlatformSupportModulesInManaged (3ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
+<<<<<<< HEAD
 			BeforeProcessingInitializeOnLoad (51ms)
 			ProcessInitializeOnLoadAttributes (388ms)
 			ProcessInitializeOnLoadMethodAttributes (17ms)
@@ -680,6 +1369,105 @@ Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4162.
 Memory consumption went from 141.1 MB to 139.3 MB.
 Total: 8.559900 ms (FindLiveObjects: 0.400600 ms CreateObjectMapping: 0.122300 ms MarkObjects: 7.674300 ms  DeleteObjects: 0.360600 ms)
+=======
+			BeforeProcessingInitializeOnLoad (41ms)
+			ProcessInitializeOnLoadAttributes (502ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 1.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4157.
+Memory consumption went from 139.8 MB to 137.9 MB.
+Total: 8.802500 ms (FindLiveObjects: 0.226600 ms CreateObjectMapping: 0.084200 ms MarkObjects: 8.177600 ms  DeleteObjects: 0.312300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.317 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+System.Exception: Error! Visual Scripting: couldn't find visual scripting package
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in .\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.071 seconds
+Domain Reload Profiling: 1388ms
+	BeginReloadAssembly (133ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (142ms)
+		LoadAssemblies (198ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1072ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (578ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (40ms)
+			ProcessInitializeOnLoadAttributes (512ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 1.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3611 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (1.8 MB). Loaded Objects now: 4161.
+Memory consumption went from 139.8 MB to 137.9 MB.
+Total: 8.740700 ms (FindLiveObjects: 0.296300 ms CreateObjectMapping: 0.127700 ms MarkObjects: 8.049000 ms  DeleteObjects: 0.266100 ms)
+>>>>>>> bb9ce0909e0fb6ebaa2bedabd23004676df0da04
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):

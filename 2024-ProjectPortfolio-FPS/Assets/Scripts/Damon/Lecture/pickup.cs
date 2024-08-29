@@ -14,7 +14,7 @@ public class pickup : MonoBehaviour
         SphereCollider coll = this.GetComponent<SphereCollider>();
         if (other.CompareTag("Player") && coll.bounds.Contains(gameManager.instance.player.transform.position))
         {
-            // give the palyer the gun
+            gameManager.instance.PlayAud(gun.pickupSound[Random.Range(0, gun.pickupSound.Length)], gun.pickupVolume);
             gameManager.instance.playerScript.getGunStats(gun);
             Destroy(gameObject);
         }

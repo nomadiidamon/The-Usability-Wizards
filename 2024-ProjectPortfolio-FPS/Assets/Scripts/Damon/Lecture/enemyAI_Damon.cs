@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class enemyAI : MonoBehaviour, IDamage
@@ -12,6 +13,7 @@ public class enemyAI : MonoBehaviour, IDamage
     [SerializeField] Transform shootPos;
     [SerializeField] Transform headPos;
     //[SerializeField] Collider meleeCollider;
+    [SerializeField] AudioSource audEnemy;
 
     private int HP;
     [SerializeField] int startingHealth;
@@ -28,9 +30,14 @@ public class enemyAI : MonoBehaviour, IDamage
     //lecture shoot angle
     //[SerializeField] int shootAngle;
 
+    [SerializeField] AudioClip[] deathSound;
+    [Range(0, 1)][SerializeField] float deathSoundVol;
+
     bool isShooting;
     bool playerInRange;
     bool isRoaming;
+    bool isPlayingSteps;
+    private bool isDead = false;
 
     float angleToPlayer;
     float stoppingDistanceOriginal;
@@ -59,7 +66,7 @@ public class enemyAI : MonoBehaviour, IDamage
 
         if (playerInRange && !canSeePlayer())
         {
-            if(!isRoaming && agent.remainingDistance < 0.05f)
+            if (!isRoaming && agent.remainingDistance < 0.05f)
                 StartCoroutine(roam());
         }
         else if (!playerInRange)
@@ -67,8 +74,6 @@ public class enemyAI : MonoBehaviour, IDamage
             if (!isRoaming && agent.remainingDistance < 0.05f)
                 StartCoroutine(roam());
         }
-  
-
     }
 
     IEnumerator roam()
@@ -92,7 +97,7 @@ public class enemyAI : MonoBehaviour, IDamage
         return HP;
     }
 
-    bool canSeePlayer ()
+    bool canSeePlayer()
     {
         playerDir = gameManager.instance.player.transform.position - headPos.position;
         angleToPlayer = Vector3.Angle(playerDir, transform.forward);
@@ -130,6 +135,8 @@ public class enemyAI : MonoBehaviour, IDamage
 
     public void takeDamage(int amount)
     {
+        if (isDead) return;
+
         HP -= amount;
         agent.SetDestination(gameManager.instance.player.transform.position);
         StopCoroutine(roam());
@@ -140,9 +147,24 @@ public class enemyAI : MonoBehaviour, IDamage
 
         if (HP <= 0)
         {
+            isDead = true;
+
             gameManager.instance.updateGameGoal(-1);
-            Destroy(gameObject);
+
+            agent.isStopped = true;
+            animator.enabled = false;
+            this.enabled = false;
+
+            playDeathAudio(deathSound[Random.Range(0, deathSound.Length)], deathSoundVol);
+
+            StartCoroutine(destroyAfterSound());
         }
+    }
+
+    IEnumerator destroyAfterSound()
+    {
+        yield return new WaitForSeconds(deathSound[0].length);
+        Destroy(gameObject);
     }
 
     IEnumerator flashRed()
@@ -151,7 +173,7 @@ public class enemyAI : MonoBehaviour, IDamage
         yield return new WaitForSeconds(0.1f);
         model.material.color = colorOrig;
     }
-    
+
     IEnumerator shoot()
     {
         isShooting = true;
@@ -209,6 +231,11 @@ public class enemyAI : MonoBehaviour, IDamage
         {
             hpbar.fillAmount = (float)HP / startingHealth;
         }
+    }
+
+    public void playDeathAudio(AudioClip sound, float vol)
+    {
+        audEnemy.PlayOneShot(sound, vol);
     }
 
 }

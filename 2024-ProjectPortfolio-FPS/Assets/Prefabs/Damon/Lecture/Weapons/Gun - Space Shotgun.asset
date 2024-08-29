@@ -22,4 +22,11 @@ MonoBehaviour:
   shootSound:
   - {fileID: 8300000, guid: f15c552e0d2904a48bdad9891b8cc7fb, type: 3}
   shootVolume: 0.5
+  pickupSound:
+  - {fileID: 8300000, guid: 018c78509679a90459a221ffd4f10ebf, type: 3}
+  pickupVolume: 0.5
+  switchSound:
+  - {fileID: 8300000, guid: ac3bc9959d69edf4e85a56ad9830a4da, type: 3}
+  switchVolume: 0.5
   isCreator: 0
+  isShield: 0
