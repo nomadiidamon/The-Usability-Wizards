@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.UIElements;
 
 public class Damage : MonoBehaviour
@@ -56,7 +57,6 @@ public class Damage : MonoBehaviour
         if (damage != null)
         {
             damage.takeDamage(damageAmount);
-            StartCoroutine(delayedDamage());
         }
         if (type == damageType.bullet)
         {
@@ -65,20 +65,26 @@ public class Damage : MonoBehaviour
             {
                 if (other.CompareTag("Ground"))
                 {
-                    //Debug.Log("Points colliding: " + other.GetComponent<Collision>().contacts.Length);
-                    //Debug.Log("Normal on the first point: " + other.GetComponent<Collision>().contacts[0].normal);
-                    //foreach (var item in other.GetComponent<Collision>().contacts)
-                    //{
-                    //    Debug.DrawRay(item.point, item.normal * 100, Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f), 10f);
-                    //}
-                    GameObject thing = gameManager.instance.playerScript.objectHeld;
+                    GameObject groundObject = gameManager.instance.playerScript.objectHeld;
+                    float halfHeight = groundObject.transform.localScale.y / 2;
 
-                    Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2),
-                        this.transform.rotation * Quaternion.AngleAxis(75, Vector3.right));
+                    //GameObject thing2 = Instantiate(thing, new Vector3(this.transform.position.x, thing.transform.localScale.y * 1.5f, this.transform.position.z),
+                    //    Quaternion.Euler(0, 0, this.transform.rotation.z));
+                    //thing2.transform.LookAt(gameManager.instance.player.transform);
+                    
+                    GameObject newGroundObject = Instantiate(groundObject, new Vector3(this.transform.position.x, halfHeight, this.transform.position.z),
+                        Quaternion.Euler(0, 0, this.transform.rotation.z));
+                    newGroundObject.transform.LookAt(gameManager.instance.player.transform);
 
                 }
                 else
-                { Instantiate(gameManager.instance.playerScript.objectHeld, this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2), this.transform.rotation); }
+                { 
+                    GameObject wallObject = gameManager.instance.playerScript.objectHeld;
+
+                   GameObject newWallObject = Instantiate(gameManager.instance.playerScript.objectHeld,
+                       this.transform.position - new Vector3(0, 0, gameManager.instance.playerScript.objectHeld.transform.localScale.z / 2), this.transform.rotation);
+                    newWallObject.transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
+                }
             }
             Destroy(gameObject);
         }
@@ -102,12 +108,5 @@ public class Damage : MonoBehaviour
             }
         }
 
-    }
-
-    IEnumerator delayedDamage()
-    {
-        gameManager.instance.player.layer = immune;              // layer 9 is immune
-        yield return new WaitForSeconds(damageDelay);
-        gameManager.instance.player.layer = originalLayer;              // layer 3 is player
     }
 }

@@ -20,6 +20,7 @@ public class gameManager : MonoBehaviour
     public GameObject playerSpawnPosition;
     
     public GameObject flashDamageScreen;
+    public GameObject underwaterOverlay;
     public GameObject restoreHealthScreen;
     public GameObject increaseDamageScreen;
     public GameObject raiseSpeedScreen;

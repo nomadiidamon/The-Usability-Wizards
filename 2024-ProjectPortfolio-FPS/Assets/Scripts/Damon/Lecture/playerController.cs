@@ -422,6 +422,11 @@ public class playerController : MonoBehaviour, IDamage
         gravity = amount;
         jumpSpeed = amount / 2;
     }
+    public void SetGravity(int gravityAmount, int jumpSpeedAmount)
+    {
+        gravity = gravityAmount;
+        jumpSpeed = jumpSpeedAmount;
+    }
 
     public void saveObjectBullet()
     {
