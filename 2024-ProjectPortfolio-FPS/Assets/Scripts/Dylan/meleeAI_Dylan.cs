@@ -11,6 +11,8 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
     [SerializeField] Transform headPos;
     //[SerializeField] BoxCollider hitbox;
 
+    public BoxCollider lavaCollider;
+
     private int HP;
     [SerializeField] int startingHealth;
     [SerializeField] int viewAngle;
@@ -35,6 +37,18 @@ public class meleeAI_Dylan : MonoBehaviour, IDamage
         HP = startingHealth;
         colorOrig = model.material.color;
         gameManager.instance.updateGameGoal(1);
+
+
+        lavaCollider = GetComponent<BoxCollider>();
+
+        if (lavaCollider != null )
+        {
+            Debug.Log("BoxCollider size: " + lavaCollider.size);
+        }
+        else
+        {
+            Debug.LogError("No BoxCollider found on this GameObject!");
+        }
 
         updateHPBar();
     }

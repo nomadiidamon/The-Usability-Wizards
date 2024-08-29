@@ -15,6 +15,8 @@ public class enemyAI : MonoBehaviour, IDamage
     //[SerializeField] Collider meleeCollider;
     [SerializeField] AudioSource audEnemy;
 
+    public BoxCollider lavaCollider;
+
     private int HP;
     [SerializeField] int startingHealth;
     [SerializeField] int viewAngle;
@@ -53,6 +55,18 @@ public class enemyAI : MonoBehaviour, IDamage
         HP = startingHealth;
         colorOrig = model.material.color;
         gameManager.instance.updateGameGoal(1);
+
+        lavaCollider = GetComponent<BoxCollider>();
+
+        if (lavaCollider != null)
+        {
+            Debug.Log("BoxCollider size: " + lavaCollider.size);
+        }
+        else
+        {
+            Debug.LogError("No BoxCollider found on this GameObject!");
+        }
+
         stoppingDistanceOriginal = agent.stoppingDistance;
         startingPosition = transform.position;
         updateHPBar();

@@ -13,7 +13,12 @@ TagManager:
   - Shield
   - Player Bullet
   - Enemy
+<<<<<<< Updated upstream
   - Eyes
+=======
+  - Lava
+  - LavaDamageable
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

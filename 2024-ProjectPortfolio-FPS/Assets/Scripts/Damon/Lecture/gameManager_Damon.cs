@@ -148,6 +148,9 @@ public class gameManager : MonoBehaviour
             isPaused = !isPaused;
             menuActive = null;
         }
+        Lava lava = FindObjectOfType<Lava>();
+        lava.StopAllCoroutines();
+        flashDamageScreen.SetActive(false);
         statePause();
         menuActive = menuLose;
         menuActive.SetActive(isPaused);

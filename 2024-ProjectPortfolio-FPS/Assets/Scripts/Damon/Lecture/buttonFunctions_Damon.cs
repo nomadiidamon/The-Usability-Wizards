@@ -20,6 +20,8 @@ public class buttonFunctions : MonoBehaviour
         gameManager.instance.stateUnpause();
         gameManager.instance.CheckpointReached = false;
         gameManager.instance.respawns = gameManager.instance.GetOriginalRespawnCount();
+        Lava lava = FindObjectOfType<Lava>();
+        lava.StartLava();
     }
 
     public void respawn()
@@ -29,7 +31,7 @@ public class buttonFunctions : MonoBehaviour
         {
             return;
         }
-        
+
         gameManager.instance.updateRespawnCount(-1);
         Debug.Log("Second Chance!");
         gameManager.instance.playerScript.spawnPlayer();
