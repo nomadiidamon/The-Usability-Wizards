@@ -11,12 +11,16 @@ public class settings : MonoBehaviour
     [SerializeField] Slider sensSlider;
     [SerializeField] Toggle sprintToggle;
     [SerializeField] Toggle invertYToggle;
+    [SerializeField] Slider fovSlider;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+
+        cameraController_Damon.SetInvertY(false);
+        playerController_Damon.SetSprintToggle(false);
 
 
         sensSlider.value = cameraController_Damon.sens;
@@ -27,6 +31,12 @@ public class settings : MonoBehaviour
 
         sprintToggle.isOn = playerController_Damon.sprintToggle;
         sprintToggle.onValueChanged.AddListener(playerController_Damon.SetSprintToggle);
+
+        fovSlider.minValue = cameraController_Damon.minFOV;
+        fovSlider.maxValue = cameraController_Damon.maxFOV;
+        fovSlider.value = cameraController_Damon.playerCamera.fieldOfView;
+        fovSlider.onValueChanged.AddListener(cameraController_Damon.SetFOV);
+
 
         
 

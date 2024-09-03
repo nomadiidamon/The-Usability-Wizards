@@ -10,6 +10,10 @@ public class cameraController : MonoBehaviour
     [SerializeField] int lockVertMin, lockVertMax;
     public bool invertY;
 
+    public Camera playerCamera;
+    public float minFOV = 30f;
+    public float maxFOV = 300f;
+
     float rotX;
 
     // Start is called before the first frame update
@@ -17,6 +21,7 @@ public class cameraController : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
     // Update is called once per frame
@@ -52,6 +57,12 @@ public class cameraController : MonoBehaviour
         invertY = toggle;
         
     }
+
+    public void SetFOV(float fov)
+    {
+        playerCamera.fieldOfView = Mathf.Clamp(fov, minFOV, maxFOV);
+    }
+
 
 
 }
